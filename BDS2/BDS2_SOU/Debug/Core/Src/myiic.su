@@ -1,0 +1,8 @@
+myiic.c:17:6:IIC_Init	4	static
+myiic.c:34:6:IIC_Start	8	static
+myiic.c:45:6:IIC_Stop	8	static
+myiic.c:58:4:IIC_Wait_Ack	16	static
+myiic.c:77:6:IIC_Ack	8	static
+myiic.c:88:6:IIC_NAck	8	static
+myiic.c:102:6:IIC_Send_Byte	24	static
+myiic.c:119:4:IIC_Read_Byte	24	static

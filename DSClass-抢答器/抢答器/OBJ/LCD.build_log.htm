@@ -1,0 +1,123 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 12 12, 12, LIC=LJWP0-B8WR5-VJA6J-UBG3E-4LU27-WGCRZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.31.0.0
+Toolchain Path:  D:\APP\Arm\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+D:\Elework\A-KEIL\ÇÀ´ðÆ÷2\ÇÀ´ðÆ÷\USER\LCD.uvprojx
+Project File Date:  12/17/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\APP\Arm\ARM\ARMCC\Bin'
+Rebuild target 'LCD'
+compiling led.c...
+compiling stm32f10x_it.c...
+compiling key.c...
+compiling system_stm32f10x.c...
+compiling main.c...
+..\HARDWARE\TIM\tim2.h(5): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c(37): warning:  #223-D: function "Index_Redbutton" declared implicitly
+  	Index_Redbutton();
+main.c(42): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(printchar,"%.3fs",count*1.0/1000);
+main.c(54): warning:  #223-D: function "Index_Red" declared implicitly
+  				Index_Red(196,200,292,224);
+main.c(62): warning:  #223-D: function "Index_Red" declared implicitly
+  				Index_Red(196,200,292,224);
+main.c(70): warning:  #223-D: function "Index_Red" declared implicitly
+  				Index_Red(196,200,292,224);
+main.c(76): warning:  #223-D: function "Index_Button" declared implicitly
+  				Index_Button();
+main.c(111): warning:  #223-D: function "Index_Title" declared implicitly
+  	Index_Title();
+main.c(112): warning:  #223-D: function "Index_Button" declared implicitly
+  	Index_Button();
+main.c(113): warning:  #223-D: function "Index_Player" declared implicitly
+  	Index_Player(0);
+main.c(101): warning:  #177-D: variable "x"  was declared but never referenced
+   	u8 x=0;
+main.c(102): warning:  #177-D: variable "lcd_id"  was declared but never referenced
+  	u8 lcd_id[12];			//´æ·ÅLCD ID×Ö·û´®
+main.c(132): warning:  #1-D: last line of file ends without a newline
+   
+main.c: 13 warnings, 0 errors
+compiling 24cxx.c...
+compiling lcd.c...
+compiling spi.c...
+compiling ctiic.c...
+compiling ft5206.c...
+compiling gt9147.c...
+compiling ott2001a.c...
+compiling w25qxx.c...
+compiling touch.c...
+compiling index.c...
+..\HARDWARE\INDEX\index.h(7): warning:  #1295-D: Deprecated declaration Index_Title - give arg types
+  void Index_Title();
+..\HARDWARE\INDEX\index.h(9): warning:  #1295-D: Deprecated declaration Index_Button - give arg types
+  void Index_Button();
+..\HARDWARE\INDEX\index.h(13): warning:  #1295-D: Deprecated declaration Index_Redbutton - give arg types
+  void Index_Redbutton();
+..\HARDWARE\INDEX\index.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\INDEX\index.c: 4 warnings, 0 errors
+compiling myiic.c...
+compiling tim2.c...
+..\HARDWARE\TIM\tim2.h(5): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\TIM\tim2.c: 1 warning, 0 errors
+compiling beep.c...
+compiling exti.c...
+..\HARDWARE\EXTI\exti.c(88): warning:  #177-D: variable "k"  was declared but never referenced
+  		u32 k=count;
+..\HARDWARE\EXTI\exti.c: 1 warning, 0 errors
+compiling delay.c...
+assembling startup_stm32f10x_hd.s...
+compiling usart.c...
+compiling misc.c...
+compiling core_cm3.c...
+compiling sys.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=49810 RO-data=6974 RW-data=9344 ZI-data=1848  
+FromELF: creating hex file...
+"..\OBJ\LCD.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:\APP\Arm\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+24l01.c:12:6:NRF24L01_SPI_Init	8	static
+24l01.c:24:6:SPI1_SetSpeed	16	static
+24l01.c:36:9:SPI1_ReadWriteByte	32	static
+24l01.c:43:6:NRF24L01_Init	8	static
+24l01.c:74:4:NRF24L01_Check	16	static
+24l01.c:88:4:NRF24L01_Write_Reg	24	static
+24l01.c:99:4:NRF24L01_Read_Reg	24	static
+24l01.c:113:4:NRF24L01_Read_Buf	32	static
+24l01.c:127:4:NRF24L01_Write_Buf	24	static
+24l01.c:139:4:NRF24L01_TxPacket	24	static
+24l01.c:163:4:NRF24L01_RxPacket	24	static
+24l01.c:181:6:NRF24L01_RX_Mode	8	static
+24l01.c:199:6:NRF24L01_TX_Mode	8	static

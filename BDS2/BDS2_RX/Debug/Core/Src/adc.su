@@ -1,0 +1,2 @@
+adc.c:67:5:Get_Adc	16	static
+adc.c:79:5:Get_Adc_Average	24	static

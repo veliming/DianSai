@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"source\startup_stm32f103xe.o"
+"source\main.o"
+"source\stm32f1xx_it.o"
+"source\stm32f1xx_hal_msp.o"
+"source\stm32f1xx_hal_gpio_ex.o"
+"source\stm32f1xx_hal_dac.o"
+"source\stm32f1xx_hal_dac_ex.o"
+"source\stm32f1xx_hal.o"
+"source\stm32f1xx_hal_rcc.o"
+"source\stm32f1xx_hal_rcc_ex.o"
+"source\stm32f1xx_hal_gpio.o"
+"source\stm32f1xx_hal_dma.o"
+"source\stm32f1xx_hal_cortex.o"
+"source\stm32f1xx_hal_pwr.o"
+"source\stm32f1xx_hal_flash.o"
+"source\stm32f1xx_hal_flash_ex.o"
+"source\stm32f1xx_hal_exti.o"
+"source\stm32f1xx_hal_tim.o"
+"source\stm32f1xx_hal_tim_ex.o"
+"source\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "source\source.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "source.map" -o source\source.axf

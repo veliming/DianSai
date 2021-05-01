@@ -1,0 +1,4 @@
+main.c:74:5:main	16	static
+main.c:190:6:SystemClock_Config	88	static
+main.c:231:4:TP_CHECK	16	static
+main.c:241:6:Error_Handler	4	static,ignoring_inline_asm

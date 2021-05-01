@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 12 12, 12, LIC=LJWP0-B8WR5-VJA6J-UBG3E-4LU27-WGCRZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.34.0.0
+Toolchain Path:  D:\APP\Arm\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+C:\Users\vecto\Desktop\BDS2_RX_NoCube\USER\NRF24L01.uvprojx
+Project File Date:  04/28/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\APP\Arm\ARM\ARMCC\Bin'
+Build target 'NRF24L01'
+compiling main.c...
+main.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			if(NRF24L01_RxPacket(tmp_buf)==0)//一旦接收到信息,则显示出来.
+main.c(128): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			if(NRF24L01_TxPacket(tmp_buf)==TX_OK)
+main.c(131): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  				LCD_ShowString(0,190,lcddev.width-1,32,16,tmp_buf); 
+main.c(141): warning:  #175-D: subscript out of range
+  				tmp_buf[32]=0;//加入结束符		   
+main.c(41): warning:  #550-D: variable "send_data"  was set but never used
+  uint8_t send_data[50];
+main.c(42): warning:  #177-D: variable "Check_flag"  was declared but never referenced
+  uint8_t Check_flag=0;
+main.c(151): warning: C4488E: write to variable 'tmp_buf' with offset out of bounds
+}
+main.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=25664 RO-data=18652 RW-data=40 ZI-data=2120  
+"..\OBJ\NRF24L01.axf" - 0 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:\APP\Arm\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

@@ -1,10 +1,10 @@
-18:59:55 **** Incremental Build of configuration Debug for project BDS5_OSC ****
+04:14:34 **** Incremental Build of configuration Debug for project BDS5_OSC ****
 make -j8 all 
 arm-none-eabi-size   BDS5_OSC.elf 
    text	   data	    bss	    dec	    hex	filename
- 122356	    492	  26476	 149324	  2474c	BDS5_OSC.elf
+  38944	    492	   2052	  41488	   a210	BDS5_OSC.elf
 гд???????????гд????? default.size.stdout
  
 
-18:59:56 Build Finished. 0 errors, 0 warnings. (took 552ms)
+04:14:35 Build Finished. 0 errors, 0 warnings. (took 578ms)
 

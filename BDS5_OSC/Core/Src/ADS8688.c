@@ -15,43 +15,28 @@ uint8_t ADS8688_Init(ADS8688 *ads, SPI_HandleTypeDef *spiHandle, GPIO_TypeDef *c
 	state += ADS_Cmd_Write(ads, RST, ads_data);
 	HAL_Delay(100);
 	// send a no_op message to the ADS to enter IDLE mode
-	state += ADS_Cmd_Write(ads, CONT, ads_data);
+	state += ADS_Cmd_Write(ads, NO_OP, ads_data);
 	HAL_Delay(10);
 	// enable auto transmit for all inputs(datasheet page 54) or as many as you want
 	// if you want only some of the inputs enabled, make sure to power down the unused ones
-	ads_data[0] = 0xff;
+	ads_data[0] = 0x03;
 	state += ADS_Prog_Write(ads, AUTO_SEQ_EN, ads_data);
 	HAL_Delay(10);
 	// set the desired features such as device id (if multiple devices are used), alarm enable/disable and output format
 	ads_data[0] = 0x03; // here i chose id = 0, alarm = disabled and SDO_format = 3 (datasheet page 56)
-	state += ADS_Prog_Write(ads, FEATURE_SELECT, ads_data);
+	state += ADS_Prog_Write(ads, F_S, ads_data);
 	HAL_Delay(10);
 	// set all channels ranges(page 57)
 	// 0x05 -> Input range is set to 0 to 2.5 x VREF (for VREF=5 volts, this means 0-10 volts range)
 	// 0x06 -> Input range is set to 0 to 1.25 x VREF (for VREF=5 volts, this means 0-5 volts range)
-	ads_data[0] = 0x06;
-	state += ADS_Prog_Write(ads, CHN_0_RANGE, ads_data);
+	ads_data[0] = IR_5V;
+	state += ADS_Prog_Write(ads, CHIR_0, ads_data);
 	HAL_Delay(10);
-	ads_data[0] = 0x06;
-	state += ADS_Prog_Write(ads, CHN_1_RANGE, ads_data);
+	ads_data[0] = IR_5V;
+	state += ADS_Prog_Write(ads, CHIR_1, ads_data);
 	HAL_Delay(10);
-	ads_data[0] = 0x05;
-	state += ADS_Prog_Write(ads, CHN_2_RANGE, ads_data);
-	HAL_Delay(10);
-	ads_data[0] = 0x05;
-	state += ADS_Prog_Write(ads, CHN_3_RANGE, ads_data);
-	HAL_Delay(10);
-	ads_data[0] = 0x05;
-	state += ADS_Prog_Write(ads, CHN_4_RANGE, ads_data);
-	HAL_Delay(10);
-	ads_data[0] = 0x05;
-	state += ADS_Prog_Write(ads, CHN_5_RANGE, ads_data);
-	HAL_Delay(10);
-	ads_data[0] = 0x06;
-	state += ADS_Prog_Write(ads, CHN_6_RANGE, ads_data);
-	HAL_Delay(10);
-	ads_data[0] = 0x06;
-	state += ADS_Prog_Write(ads, CHN_7_RANGE, ads_data);
+	ads_data[0] = 0xfc;
+	state += ADS_Prog_Write(ads, CH_PD, ads_data);
 	HAL_Delay(10);
 	// start the auto transmission by entering the appropriate state
 	state += ADS_Cmd_Write(ads, AUTO_RST, ads_data);
@@ -109,8 +94,8 @@ HAL_StatusTypeDef ADS_Read_All_Raw(ADS8688 *ads, uint16_t *data) {
 	HAL_StatusTypeDef ret;
 	uint8_t ads_raw[2];
 	for(int i=0; i<CHNS_NUM_READ; i++) {
-	  ret = ADS_Cmd_Write(ads, CONT, ads_raw);
-	  data[i] = (int)((uint16_t)(ads_raw[1]<<8 | ads_raw[0]) >> 4);
+	  ret = ADS_Cmd_Write(ads, NO_OP, ads_raw);
+	  data[i] = (int)((uint16_t)(ads_raw[1]<<8 | ads_raw[0]));
 	}
 	return ret;
 }

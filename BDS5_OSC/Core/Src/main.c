@@ -28,22 +28,33 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "arm_math.h"
-#include "arm_const_structs.h"
+#include "ADS8688.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define NPT  2047  //1024点FFT
-#define Fs 2047  //采样频率 5120Hz 频率分辨率 5Hz
-#define PI2 6.28318530717959
-float32_t  testInput_f32[NPT];
-float32_t  testOutput_f32[NPT];
-float32_t  testOutput[NPT];
+
+#define default_interval 500
+
+// macro and pattern to print binary numbers
+#define BYTE_TO_BIN_PAT "%c%c%c%c%c%c%c%c"
+#define BYTE_TO_BIN(byte)		\
+	(byte & 0x80 ? '1' : '0'),	\
+	(byte & 0x40 ? '1' : '0'),	\
+	(byte & 0x20 ? '1' : '0'),	\
+	(byte & 0x10 ? '1' : '0'),	\
+	(byte & 0x08 ? '1' : '0'),	\
+	(byte & 0x04 ? '1' : '0'),	\
+	(byte & 0x02 ? '1' : '0'),	\
+	(byte & 0x01 ? '1' : '0')
+
 
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,13 +65,23 @@ float32_t  testOutput[NPT];
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+char buf[100];
+int count=0;
+// Timing Variables
+unsigned int current=0, previous=0, interval=default_interval;
 
+// ADS variables
+ADS8688 ads;
+uint16_t ads_data[8];
+float volt_helper = 0;
+float volt[2] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void arm_rfft_fast_f32_app(void);
+
+void print(char *msg, ...);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -91,7 +112,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  HAL_Delay(200);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -101,18 +122,38 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  arm_rfft_fast_f32_app();
-
-
+  ADS8688_Init(&ads, &hspi3, SPI3_CS_GPIO_Port, SPI3_CS_Pin);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  current = HAL_GetTick();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	  if(previous<current) {
+		  unsigned long now = HAL_GetTick();
+		  ADS_Read_All_Raw(&ads, ads_data);
+		  for(int i=0; i<2; i++) {
+			  if(i==0){
+				  volt[i] = (((float)(ads_data[i]+3))*10.24/65535.0)-5.12;
+			  }
+			  else{
+				  volt[i] = (((float)(ads_data[i]))*10.24/65535.0)-5.12;
+			  }
+			  printf("CHN_%d: %u %u    "BYTE_TO_BIN_PAT" "BYTE_TO_BIN_PAT"  %f\n", i, (uint16_t)(ads_data[0]), (uint16_t)(ads_data[1]<<8) ,  BYTE_TO_BIN(ads_data[1]), BYTE_TO_BIN(ads_data[0]), volt[i]);
+
+		  }
+		  now = HAL_GetTick() - now;
+		  printf("total: %lu ms\n\r", now);
+		  printf("-----------------------------------------------------------\n\r");
+
+		  previous = current;
+		  previous+=interval;
+	  }
   }
   /* USER CODE END 3 */
 }
@@ -164,40 +205,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void arm_rfft_fast_f32_app(void)
-{
-  uint16_t i;
-  arm_rfft_fast_instance_f32 S;
 
-  /* 实数序列FFT长度 */
-  uint16_t fftSize = NPT;
-  /* 正变换 */
-    uint8_t ifftFlag = 0;
-
-  /* 初始化结构体S中的参数 */
-   arm_rfft_fast_init_f32(&S, fftSize);
-
-    /* 按照实部，虚部，实部，虚部..... 的顺序存储数据 */
-  for(i=0; i<fftSize; i++)
-  {
-    /*3种频率 50Hz 2500Hz 2550Hz */
-    testInput_f32[i] = 1000*arm_sin_f32(PI2*i*50.0/Fs) ;
-  }
-
-  /* 1024点实序列快速FFT */
-  arm_rfft_fast_f32(&S, testInput_f32, testOutput_f32, ifftFlag);
-
-  /* 为了方便跟函数arm_cfft_f32计算的结果做对比，这里求解了1024组模值，实际函数arm_rfft_fast_f32
-     只求解出了512组
-  */
-   arm_cmplx_mag_f32(testOutput_f32, testOutput, fftSize);
-
-  /* 串口打印求解的模值 */
-  for(i=0; i<fftSize/2; i++)
-  {
-    printf("%d  %f\r\n", i,testOutput[i]);
-  }
-}
 /* USER CODE END 4 */
 
 /**
@@ -208,10 +216,7 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -227,7 +232,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

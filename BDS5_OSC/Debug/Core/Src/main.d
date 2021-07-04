@@ -34,9 +34,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/fsmc.h \
  D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_math.h \
  D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/core_cm4.h \
- D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_const_structs.h \
- D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_math.h \
- D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_common_tables.h
+ ../Core/Inc/ADS8688.h
 
 ../Core/Inc/main.h:
 
@@ -118,8 +116,4 @@ D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_math.h:
 
 D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/core_cm4.h:
 
-D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_const_structs.h:
-
-D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_math.h:
-
-D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include/arm_common_tables.h:
+../Core/Inc/ADS8688.h:

@@ -36,34 +36,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := BDS4_adda
+BUILD_ARTIFACT_NAME := BDS4_DCDC
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX := 
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME).$(BUILD_ARTIFACT_EXTENSION)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-BDS4_adda.elf \
+BDS4_DCDC.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-BDS4_adda.list \
+BDS4_DCDC.list \
 
 OBJCOPY_BIN += \
-BDS4_adda.bin \
+BDS4_DCDC.bin \
 
 
 # 所有目标
 all: main-build
 
 # 主构建目标
-main-build: BDS4_adda.elf secondary-outputs
+main-build: BDS4_DCDC.elf secondary-outputs
 
 # 工具调用
-BDS4_adda.elf: $(OBJS) $(USER_OBJS) D:\Work-Ele\A-KEIL\BDS4_adda\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BDS4_adda.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS4_adda\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS4_adda.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BDS4_DCDC.elf: $(OBJS) $(USER_OBJS) D:\Work-Ele\A-KEIL\BDS4_DCDC\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BDS4_DCDC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS4_DCDC\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS4_DCDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo '已结束构建目标： $@'
 	@echo ' '
 
@@ -72,13 +72,13 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo '已结束构建： $@'
 	@echo ' '
 
-BDS4_adda.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "BDS4_adda.list"
+BDS4_DCDC.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "BDS4_DCDC.list"
 	@echo '已结束构建： $@'
 	@echo ' '
 
-BDS4_adda.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "BDS4_adda.bin"
+BDS4_DCDC.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "BDS4_DCDC.bin"
 	@echo '已结束构建： $@'
 	@echo ' '
 

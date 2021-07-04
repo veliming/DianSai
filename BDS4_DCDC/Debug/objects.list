@@ -1,6 +1,4 @@
 "Core/Inc/obase.o"
-"Core/Src/arm_pid_init_f32.o"
-"Core/Src/arm_pid_reset_f32.o"
 "Core/Src/lcd.o"
 "Core/Src/main.o"
 "Core/Src/stm32f4xx_hal_msp.o"

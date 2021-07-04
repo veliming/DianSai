@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“BDS3_SOU2/BDS2_AMP.ioc”重命名为“BDS3_SOU2.ioc”" description="重命名资源“BDS2_AMP.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BDS2_AMP.ioc" name="BDS3_SOU2.ioc" stamp="1622803082905" updateReferences="true"/>
+</session>

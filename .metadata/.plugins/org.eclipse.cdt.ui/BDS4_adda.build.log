@@ -1,0 +1,20 @@
+19:33:17 **** Incremental Build of configuration Debug for project BDS4_adda ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BDS4_adda.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS4_adda\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS4_adda.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? BDS4_adda.elf
+ 
+arm-none-eabi-objdump -h -S  BDS4_adda.elf  > "BDS4_adda.list"
+arm-none-eabi-objcopy  -O binary  BDS4_adda.elf  "BDS4_adda.bin"
+arm-none-eabi-size   BDS4_adda.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66952	    196	   2916	  70064	  111b0	BDS4_adda.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? BDS4_adda.bin
+ 
+гд???????????гд????? BDS4_adda.list
+ 
+
+19:33:18 Build Finished. 0 errors, 0 warnings. (took 1s.363ms)
+

@@ -1,0 +1,5 @@
+ADS8688.c:6:9:ADS8688_Init	32	static
+ADS8688.c:65:19:ADS_Prog_Read	40	static
+ADS8688.c:80:19:ADS_Prog_Write	40	static
+ADS8688.c:94:19:ADS_Cmd_Write	40	static
+ADS8688.c:108:19:ADS_Read_All_Raw	32	static

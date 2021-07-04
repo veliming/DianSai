@@ -61,8 +61,8 @@ all: main-build
 main-build: BDS2_SOU.elf secondary-outputs
 
 # 工具调用
-BDS2_SOU.elf: $(OBJS) $(USER_OBJS) D:\Elework\BDS2_SOU\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BDS2_SOU.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Elework\BDS2_SOU\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS2_SOU.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+BDS2_SOU.elf: $(OBJS) $(USER_OBJS) D:\Work-Ele\A-KEIL\BDS2\BDS2_SOU\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BDS2_SOU.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS2\BDS2_SOU\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS2_SOU.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo '已结束构建目标： $@'
 	@echo ' '
 

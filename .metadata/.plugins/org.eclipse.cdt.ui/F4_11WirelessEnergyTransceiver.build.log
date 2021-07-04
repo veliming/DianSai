@@ -1,0 +1,114 @@
+20:12:18 **** Incremental Build of configuration Debug for project F4_11WirelessEnergyTransceiver ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/F4_W24Q128_Driver/Src/w25qxx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_W24Q128_Driver/Src/w25qxx.d" -MT"Drivers/F4_W24Q128_Driver/Src/w25qxx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_W24Q128_Driver/Src/w25qxx.o"
+arm-none-eabi-gcc "../Drivers/F4_TOUCH_Driver/Src/24cxx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_TOUCH_Driver/Src/24cxx.d" -MT"Drivers/F4_TOUCH_Driver/Src/24cxx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_TOUCH_Driver/Src/24cxx.o"
+arm-none-eabi-gcc "../Drivers/F4_TOUCH_Driver/Src/myiic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_TOUCH_Driver/Src/myiic.d" -MT"Drivers/F4_TOUCH_Driver/Src/myiic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_TOUCH_Driver/Src/myiic.o"
+arm-none-eabi-gcc "../Drivers/F4_TOUCH_Driver/Src/touch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_TOUCH_Driver/Src/touch.d" -MT"Drivers/F4_TOUCH_Driver/Src/touch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_TOUCH_Driver/Src/touch.o"
+arm-none-eabi-gcc "../Drivers/F4_LCD_Driver/Src/lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_LCD_Driver/Src/lcd.d" -MT"Drivers/F4_LCD_Driver/Src/lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_LCD_Driver/Src/lcd.o"
+arm-none-eabi-gcc "../Drivers/F4_LCD_Driver/Src/text.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/F4_LCD_Driver/Src/text.d" -MT"Drivers/F4_LCD_Driver/Src/text.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/F4_LCD_Driver/Src/text.o"
+arm-none-eabi-gcc "../Core/Src/base.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/base.d" -MT"Core/Src/base.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/base.o"
+arm-none-eabi-gcc "../Core/Src/dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dac.d" -MT"Core/Src/dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dac.o"
+In file included from ../Drivers/F4_TOUCH_Driver/Inc/myiic.h:3,
+                 from ../Drivers/F4_TOUCH_Driver/Src/myiic.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/F4_TOUCH_Driver/Src/subdir.mk:27: Drivers/F4_TOUCH_Driver/Src/myiic.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Drivers/F4_W24Q128_Driver/Inc/w25qxx.h:3,
+                 from ../Drivers/F4_W24Q128_Driver/Src/w25qxx.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/F4_W24Q128_Driver/Src/subdir.mk:19: Drivers/F4_W24Q128_Driver/Src/w25qxx.o] Error 1
+In file included from ../Drivers/F4_TOUCH_Driver/Inc/myiic.h:3,
+                 from ../Drivers/F4_TOUCH_Driver/Inc/24cxx.h:3,
+                 from ../Drivers/F4_TOUCH_Driver/Src/24cxx.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Core/Src/dac.c:21:
+../Core/Inc/dac.h:34:8: error: unknown type name 'DAC_HandleTypeDef'
+   34 | extern DAC_HandleTypeDef hdac;
+      |        ^~~~~~~~~~~~~~~~~
+In file included from ../Drivers/F4_TOUCH_Driver/Inc/touch.h:3,
+                 from ../Drivers/F4_TOUCH_Driver/Src/touch.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+../Core/Src/dac.c:27:1: error: unknown type name 'DAC_HandleTypeDef'
+   27 | DAC_HandleTypeDef hdac;
+      | ^~~~~~~~~~~~~~~~~
+In file included from ../Drivers/F4_LCD_Driver/Inc/lcd.h:6,
+                 from ../Drivers/F4_LCD_Driver/Src/lcd.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+../Core/Src/dac.c: In function 'MX_DAC_Init':
+../Core/Src/dac.c:37:3: error: unknown type name 'DAC_ChannelConfTypeDef'
+   37 |   DAC_ChannelConfTypeDef sConfig = {0};
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/dac.c:44:7: error: request for member 'Instance' in something not a structure or union
+   44 |   hdac.Instance = DAC;
+      |       ^
+../Core/Src/dac.c:44:19: error: 'DAC' undeclared (first use in this function)
+   44 |   hdac.Instance = DAC;
+      |                   ^~~
+In file included from ../Drivers/F4_LCD_Driver/Src/text.c:1:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+../Core/Src/dac.c:44:19: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/dac.c:45:7: warning: implicit declaration of function 'HAL_DAC_Init'; did you mean 'MX_DAC_Init'? [-Wimplicit-function-declaration]
+   45 |   if (HAL_DAC_Init(&hdac) != HAL_OK)
+      |       ^~~~~~~~~~~~
+      |       MX_DAC_Init
+../Core/Src/dac.c:45:30: error: 'HAL_OK' undeclared (first use in this function)
+   45 |   if (HAL_DAC_Init(&hdac) != HAL_OK)
+      |                              ^~~~~~
+make: *** [Drivers/F4_LCD_Driver/Src/subdir.mk:22: Drivers/F4_LCD_Driver/Src/lcd.o] Error 1
+make: *** [Drivers/F4_TOUCH_Driver/Src/subdir.mk:25: Drivers/F4_TOUCH_Driver/Src/24cxx.o] Error 1
+../Core/Src/dac.c:51:10: error: request for member 'DAC_Trigger' in something not a structure or union
+   51 |   sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+      |          ^
+../Core/Src/dac.c:51:25: error: 'DAC_TRIGGER_NONE' undeclared (first use in this function)
+   51 |   sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+      |                         ^~~~~~~~~~~~~~~~
+../Core/Src/dac.c:52:10: error: request for member 'DAC_OutputBuffer' in something not a structure or union
+   52 |   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+      |          ^
+make: *** [Drivers/F4_TOUCH_Driver/Src/subdir.mk:29: Drivers/F4_TOUCH_Driver/Src/touch.o] Error 1
+In file included from ../Core/Src/base.c:2:
+../Core/Inc/base.h:5:10: fatal error: stm32f4xx.h: No such file or directory
+    5 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+make: *** [Drivers/F4_LCD_Driver/Src/subdir.mk:24: Drivers/F4_LCD_Driver/Src/text.o] Error 1
+compilation terminated.
+../Core/Src/dac.c:52:30: error: 'DAC_OUTPUTBUFFER_ENABLE' undeclared (first use in this function)
+   52 |   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/dac.c:53:7: warning: implicit declaration of function 'HAL_DAC_ConfigChannel' [-Wimplicit-function-declaration]
+   53 |   if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+      |       ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/dac.c:53:46: error: 'DAC_CHANNEL_1' undeclared (first use in this function)
+   53 |   if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+      |                                              ^~~~~~~~~~~~~
+../Core/Src/dac.c: At top level:
+../Core/Src/dac.c:63:22: error: unknown type name 'DAC_HandleTypeDef'
+   63 | void HAL_DAC_MspInit(DAC_HandleTypeDef* dacHandle)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/dac.c:90:24: error: unknown type name 'DAC_HandleTypeDef'
+   90 | void HAL_DAC_MspDeInit(DAC_HandleTypeDef* dacHandle)
+      |                        ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/base.o] Error 1
+make: *** [Core/Src/subdir.mk:54: Core/Src/dac.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+20:12:18 Build Failed. 29 errors, 2 warnings. (took 545ms)
+

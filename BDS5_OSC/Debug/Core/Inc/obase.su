@@ -1,0 +1,4 @@
+obase.c:22:6:delay_init	16	static
+obase.c:27:6:delay_ns	16	static
+obase.c:34:6:delay_us	40	static
+obase.c:58:6:delay_ms	24	static

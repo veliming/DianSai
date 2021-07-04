@@ -1,0 +1,13 @@
+touch.c:54:6:TP_Write_Byte	32	static
+touch.c:73:5:TP_Read_AD	32	static
+touch.c:107:5:TP_Read_XOY	40	static
+touch.c:137:4:TP_Read_XY	16	static
+touch.c:153:4:TP_Read_XY2	24	static
+touch.c:207:4:TP_Scan	8	static
+touch.c:180:6:TP_Drow_Touch_Point	32	static
+touch.c:194:6:TP_Draw_Big_Point	24	static
+touch.c:245:6:TP_Save_Adjdata	16	static
+touch.c:265:4:TP_Get_Adjdata	16	static
+touch.c:298:6:TP_Adj_Info_Show	64	static
+touch.c:323:6:TP_Adjust	112	static
+touch.c:477:4:TP_Init	8	static

@@ -1,0 +1,10 @@
+21:44:48 **** Incremental Build of configuration Debug for project BDS3_SOU2 ****
+make -j8 all 
+arm-none-eabi-size   BDS3_SOU2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44584	    184	   1776	  46544	   b5d0	BDS3_SOU2.elf
+гд???????????гд????? default.size.stdout
+ 
+
+21:44:49 Build Finished. 0 errors, 0 warnings. (took 610ms)
+

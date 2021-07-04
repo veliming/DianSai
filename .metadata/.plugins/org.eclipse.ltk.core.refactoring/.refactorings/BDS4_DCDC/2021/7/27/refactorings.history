@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“BDS4_DADA/BDS4_adda.ioc”重命名为“BDS4_DADA.ioc”" description="重命名资源“BDS4_adda.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BDS4_adda.ioc" name="BDS4_DADA.ioc" stamp="1625284120274" updateReferences="true"/>&#x0A;<refactoring comment="将资源“BDS4_DCDC/BDS4_DADA.ioc”重命名为“BDS4_DCDC.ioc”" description="重命名资源“BDS4_DADA.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BDS4_DADA.ioc" name="BDS4_DCDC.ioc" stamp="1625320697405" updateReferences="true"/>
+</session>

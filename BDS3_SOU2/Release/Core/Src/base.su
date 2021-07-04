@@ -1,0 +1,5 @@
+base.c:14:6:delay_init	8	static
+base.c:19:6:delay_ns	0	static
+base.c:26:6:delay_us	12	static
+base.c:50:6:delay_ms	16	static
+base.c:56:9:KEY_Scan	8	static

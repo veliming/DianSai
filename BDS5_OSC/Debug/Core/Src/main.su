@@ -1,0 +1,4 @@
+main.c:75:5:main	8	static
+main.c:124:6:SystemClock_Config	88	static
+main.c:167:6:arm_rfft_fast_f32_app	48	static
+main.c:207:6:Error_Handler	4	static,ignoring_inline_asm

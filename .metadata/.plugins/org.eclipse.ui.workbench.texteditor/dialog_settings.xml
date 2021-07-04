@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="true"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="USB_DEBUG"/>
+		<list key="findhistory">
+			<item value="USB_DEBUG"/>
+			<item value="__CC_ARM"/>
+			<item value="ADS_Read_All_Raw"/>
+			<item value="FPU_pre"/>
+			<item value="FPU"/>
+			<item value="pwm"/>
+			<item value="ToV"/>
+			<item value="i"/>
+			<item value="ADCTIMES"/>
+			<item value="tp_dev.sta&amp;&amp;"/>
+		</list>
+		<list key="replacehistory">
+			<item value="var"/>
+			<item value=""/>
+			<item value="HAL_Delay(1);"/>
+			<item value="uint32_t"/>
+			<item value="uint8_t"/>
+			<item value="uint16_t"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="911"/>
+		<item key="DIALOG_Y_ORIGIN" value="315"/>
+		<item key="DIALOG_WIDTH" value="326"/>
+		<item key="DIALOG_HEIGHT" value="453"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+</section>

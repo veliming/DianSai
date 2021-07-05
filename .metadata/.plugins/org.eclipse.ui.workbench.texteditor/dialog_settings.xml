@@ -6,8 +6,10 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="USB_DEBUG"/>
+		<item key="selection" value="interval"/>
 		<list key="findhistory">
+			<item value="interval"/>
+			<item value="default_interval"/>
 			<item value="USB_DEBUG"/>
 			<item value="__CC_ARM"/>
 			<item value="ADS_Read_All_Raw"/>

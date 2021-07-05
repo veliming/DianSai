@@ -72,9 +72,10 @@ unsigned int current=0, previous=0, interval=default_interval;
 
 // ADS variables
 ADS8688 ads;
-uint16_t ads_data[8];
-float volt_helper = 0;
-float volt[2] = {0};
+uint16_t ads_data[2];
+//float volt[2] = {0};
+float volt1[400] = {0};
+float volt2[400] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -121,39 +122,28 @@ int main(void)
   MX_TIM3_Init();
   MX_SPI3_Init();
   MX_USART2_UART_Init();
+  MX_TIM2_Init();
+  MX_TIM4_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   ADS8688_Init(&ads, &hspi3, SPI3_CS_GPIO_Port, SPI3_CS_Pin);
+  HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  current = HAL_GetTick();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-	  if(previous<current) {
-		  unsigned long now = HAL_GetTick();
-		  ADS_Read_All_Raw(&ads, ads_data);
 		  for(int i=0; i<2; i++) {
-			  if(i==0){
-				  volt[i] = (((float)(ads_data[i]+3))*10.24/65535.0)-5.12;
-			  }
-			  else{
-				  volt[i] = (((float)(ads_data[i]))*10.24/65535.0)-5.12;
-			  }
-			  printf("CHN_%d: %u %u    "BYTE_TO_BIN_PAT" "BYTE_TO_BIN_PAT"  %f\n", i, (uint16_t)(ads_data[0]), (uint16_t)(ads_data[1]<<8) ,  BYTE_TO_BIN(ads_data[1]), BYTE_TO_BIN(ads_data[0]), volt[i]);
+			  //printf("CHN_%d: %u %u    "BYTE_TO_BIN_PAT" "BYTE_TO_BIN_PAT"  %f\n", i, (uint16_t)(ads_data[0]), (uint16_t)(ads_data[1]) ,  BYTE_TO_BIN(ads_data[1]), BYTE_TO_BIN(ads_data[0]), volt[i]);
 
 		  }
-		  now = HAL_GetTick() - now;
-		  printf("total: %lu ms\n\r", now);
-		  printf("-----------------------------------------------------------\n\r");
 
-		  previous = current;
-		  previous+=interval;
-	  }
+
   }
   /* USER CODE END 3 */
 }

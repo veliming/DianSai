@@ -83,6 +83,7 @@ HAL_StatusTypeDef ADS_Cmd_Write(ADS8688 *ads, uint8_t cmd, uint8_t *data) {
 
 	HAL_GPIO_WritePin(ads->csPinBank, ads->csPin, GPIO_PIN_RESET);
 	ret = HAL_SPI_TransmitReceive(ads->spiHandle, txbuf, rxbuf, 2, 10);
+	//ret = HAL_SPI_TransmitReceive_DMA(ads->spiHandle, txbuf, rxbuf, 2);
 	HAL_GPIO_WritePin(ads->csPinBank, ads->csPin, GPIO_PIN_SET);
 
 	data[0] = rxbuf[2];

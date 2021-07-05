@@ -27,11 +27,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "stdio.h"
-#include "obase.h"
-#include "lcd.h"
 #include "arm_math.h"
 #include "ADS8688.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,14 +50,11 @@
 	(byte & 0x01 ? '1' : '0')
 
 
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define NPT  1024  //1024点FFT
-#define Fs 5120  //采样频率 5120Hz 频率分辨�? 5Hz
-#define PI2 6.28318530717959
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -72,15 +67,6 @@
 /* USER CODE BEGIN PV */
 char buf[100];
 int count=0;
-
-float32_t  testInput_f32[NPT];
-float32_t  testOutput_f32[NPT];
-float32_t  testOutput[NPT];
-
-
-float32_t  Max_Val=0;
-int Row=0;
-
 // Timing Variables
 unsigned int current=0, previous=0, interval=default_interval;
 
@@ -88,14 +74,14 @@ unsigned int current=0, previous=0, interval=default_interval;
 ADS8688 ads;
 uint16_t ads_data[8];
 float volt_helper = 0;
-int volt[8] = {0};
+float volt[2] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
-void arm_rfft_fast_f32_app(void);
+void print(char *msg, ...);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -136,32 +122,32 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  LCD_Init();
-  tp_dev.init();
-  POINT_COLOR=RED;
   ADS8688_Init(&ads, &hspi3, SPI3_CS_GPIO_Port, SPI3_CS_Pin);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  arm_rfft_fast_f32_app();
   while (1)
   {
-	  current = HAL_GetTick();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		Max_Val=0;
-		for(int i=2;i<NPT/2;i++)
-		{
-			if(testOutput[i]>Max_Val)
-			{
-				Max_Val=testOutput[i];
-				Row=i;
-			}
-		}
-		Freq=(72000000)/(NPT*(ARR+1)*(PSC+1)/Row);
-		LCD_ShowxNum(55,70,Freq,7,24,0);
+
+		  ADS_Read_All_Raw(&ads, ads_data);
+		  for(int i=0; i<2; i++) {
+			  if(i==0){
+				  volt[i] = (((float)(ads_data[i]+3))*10.24/65535.0)-5.12;
+			  }
+			  else{
+				  volt[i] = (((float)(ads_data[i]))*10.24/65535.0)-5.12;
+			  }
+			  printf("CHN_%d: %u %u    "BYTE_TO_BIN_PAT" "BYTE_TO_BIN_PAT"  %f\n", i, (uint16_t)(ads_data[0]), (uint16_t)(ads_data[1]<<8) ,  BYTE_TO_BIN(ads_data[1]), BYTE_TO_BIN(ads_data[0]), volt[i]);
+
+		  }
+
+		  printf("-----------------------------------------------------------\n\r");
+
 
   }
   /* USER CODE END 3 */
@@ -215,43 +201,6 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-
-void arm_rfft_fast_f32_app(void)
-{
-  uint16_t i;
-  arm_rfft_fast_instance_f32 S;
-
-  /* 实数序列FFT长度 */
-  uint16_t fftSize = NPT;
-  /* 正变�? */
-    uint8_t ifftFlag = 0;
-
-  /* 初始化结构体S中的参数 */
-   arm_rfft_fast_init_f32(&S, fftSize);
-
-    /* 按照实部，虚部，实部，虚�?..... 的顺序存储数�? */
-  for(i=0; i<1024; i++)
-  {
-    /*3种频�? 50Hz 2500Hz 2550Hz */
-    testInput_f32[i] = 1000*arm_sin_f32(PI2*i*50.0/Fs) +
-               2000*arm_sin_f32(PI2*i*2500.0/Fs)  +
-               3000*arm_sin_f32(PI2*i*2550.0/Fs);
-  }
-
-  /* 1024点实序列快�?�FFT */
-  arm_rfft_fast_f32(&S, testInput_f32, testOutput_f32, ifftFlag);
-
-  /* 为了方便跟函数arm_cfft_f32计算的结果做对比，这里求解了1024组模值，实际函数arm_rfft_fast_f32
-     只求解出�?512�?
-  */
-   arm_cmplx_mag_f32(testOutput_f32, testOutput, fftSize);
-
-  /* 串口打印求解的模�? */
-  for(i=0; i<fftSize/2; i++)
-  {
-    printf("%f\r\n", testOutput[i]);
-  }
-}
 /* USER CODE END 4 */
 
 /**

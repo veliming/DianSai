@@ -39161,3 +39161,1338 @@
 2021-07-05 02:37:46,814 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
 2021-07-05 02:37:46,916 [INFO] OpenFileManager:323 - Restore cursor
 2021-07-05 02:54:03,481 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS unused message: RemoveAllSearchesAction_confirm_label in: org.eclipse.search2.internal.ui.SearchMessages
+2021-07-05 10:53:50,406 [INFO] Activator:170 - 
+
+
+2021-07-05 10:53:50,425 [INFO] Activator:171 - !SESSION log4j initialized
+2021-07-05 10:53:54,738 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS unused message: RemoveAllSearchesAction_confirm_label in: org.eclipse.search2.internal.ui.SearchMessages
+2021-07-05 12:27:18,143 [INFO] Activator:170 - 
+
+
+2021-07-05 12:27:18,172 [INFO] Activator:171 - !SESSION log4j initialized
+2021-07-05 12:27:26,172 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Warning: NLS unused message: RemoveAllSearchesAction_confirm_label in: org.eclipse.search2.internal.ui.SearchMessages
+2021-07-05 14:56:17,538 [INFO] McuFinderGlobals:39 - Set McuFinder mode to 2 (CubeIDE integrated)
+2021-07-05 14:56:18,946 [INFO] ApplicationProperties:181 - Using Application install path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-07-05 14:56:19,026 [INFO] DbMcusXml:74 - Set database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-07-05 14:56:19,032 [INFO] DbBoardsPdsc:56 - Set plugin database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-07-05 14:56:19,033 [INFO] DbMcus:258 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,033 [INFO] DbBoards:264 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,036 [INFO] DbExamples:333 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,196 [INFO] DbMcusAds:85 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,281 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,284 [INFO] DbMcusJson:65 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,285 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,286 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,438 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-07-05 14:56:19,442 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,692 [INFO] RulesReader:52 - Compatibility file has been processed (237 Rules)
+2021-07-05 14:56:19,884 [INFO] MicroXplorer:622 - Detected Java Version = 11.0.9.1
+2021-07-05 14:56:19,885 [INFO] DbMcusXml:74 - Set database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-07-05 14:56:19,885 [INFO] DbBoardsPdsc:56 - Set plugin database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-07-05 14:56:19,885 [INFO] DbMcus:258 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,885 [INFO] DbBoards:264 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,885 [INFO] DbExamples:333 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:19,885 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,885 [INFO] DbMcusAds:85 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,886 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,886 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,886 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,886 [INFO] DbMcusJson:65 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,886 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,886 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,886 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,886 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,886 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,887 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,887 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-07-05 14:56:19,887 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:19,887 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:19,995 [INFO] MainPanel:204 - HeapMemory: 367001600
+2021-07-05 14:56:20,194 [INFO] DbMcusXml:74 - Set database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-07-05 14:56:20,194 [INFO] DbBoardsPdsc:56 - Set plugin database path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-07-05 14:56:20,194 [INFO] DbMcus:258 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:20,194 [INFO] DbBoards:264 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:20,194 [INFO] DbExamples:333 - Set plugin images path to: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-07-05 14:56:20,195 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,195 [INFO] DbMcusAds:85 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,195 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,196 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,196 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,196 [INFO] DbMcusJson:65 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,196 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,196 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,196 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,196 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,196 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,196 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,197 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-07-05 14:56:20,197 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder/ => C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder
+2021-07-05 14:56:20,197 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\Quar-Tzer-top\.stmcufinder\plugins\mcufinder//mcu/
+2021-07-05 14:56:20,222 [INFO] ApplicationProperties:181 - Using Application install path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-07-05 14:56:20,224 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, ]
+2021-07-05 14:56:20,225 [INFO] PluginManage:292 - Check plugin analytics
+2021-07-05 14:56:20,494 [INFO] AnalyticsPlugin:233 - Accepted Software Licenses: STM32CubeMX.6.2.1
+2021-07-05 14:56:20,495 [INFO] AnalyticsPlugin:235 - Accepted CMSIS Pack Licenses: 
+2021-07-05 14:56:20,496 [INFO] AnalyticsPlugin:237 - Accepted Firmware Licenses: 
+2021-07-05 14:56:20,497 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2021-07-05 14:56:20,497 [INFO] PluginManage:292 - Check plugin clock
+2021-07-05 14:56:20,551 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2021-07-05 14:56:20,551 [INFO] PluginManage:292 - Check plugin ddr
+2021-07-05 14:56:20,587 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2021-07-05 14:56:20,587 [INFO] PluginManage:292 - Check plugin filemanager
+2021-07-05 14:56:20,800 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2021-07-05 14:56:20,800 [INFO] PluginManage:292 - Check plugin ipmanager
+2021-07-05 14:56:20,818 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2021-07-05 14:56:20,819 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2021-07-05 14:56:20,858 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2021-07-05 14:56:20,858 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2021-07-05 14:56:20,912 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2021-07-05 14:56:20,912 [INFO] PluginManage:292 - Check plugin power
+2021-07-05 14:56:21,029 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2021-07-05 14:56:21,029 [INFO] PluginManage:292 - Check plugin projectmanager
+2021-07-05 14:56:21,046 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2021-07-05 14:56:21,046 [INFO] PluginManage:292 - Check plugin thirdparty
+2021-07-05 14:56:21,354 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2021-07-05 14:56:21,354 [INFO] PluginManage:292 - Check plugin tools
+2021-07-05 14:56:21,354 [WARN] IntegrityCheckThread:59 - waiting for thirdparty lock release [integrity check]
+2021-07-05 14:56:21,355 [INFO] IntegrityCheckThread:61 - entering critical section [integrity check]
+2021-07-05 14:56:21,355 [INFO] ThirdPartyUpdaterWithRetryManager:56 - Updater plugin not ready yet. [1/15]
+2021-07-05 14:56:21,408 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2021-07-05 14:56:21,408 [INFO] PluginManage:292 - Check plugin tutovideos
+2021-07-05 14:56:21,694 [INFO] PluginManage:342 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2021-07-05 14:56:21,694 [INFO] PluginManage:292 - Check plugin updater
+2021-07-05 14:56:21,747 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2021-07-05 14:56:21,748 [INFO] PluginManage:265 - PluginManage : Loaded plugins [13]
+2021-07-05 14:56:21,968 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-07-05 14:56:22,159 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,159 [INFO] PluginManager:203 - loadIPPluginJar : add adc
+2021-07-05 14:56:22,208 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,208 [INFO] PluginManager:203 - loadIPPluginJar : add aes
+2021-07-05 14:56:22,243 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,243 [INFO] PluginManager:203 - loadIPPluginJar : add can
+2021-07-05 14:56:22,279 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,279 [INFO] PluginManager:203 - loadIPPluginJar : add comp
+2021-07-05 14:56:22,306 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,307 [INFO] PluginManager:203 - loadIPPluginJar : add cryp
+2021-07-05 14:56:22,334 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,334 [INFO] PluginManager:203 - loadIPPluginJar : add dfsdm
+2021-07-05 14:56:22,361 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,362 [INFO] PluginManager:203 - loadIPPluginJar : add dma
+2021-07-05 14:56:22,403 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,403 [INFO] PluginManager:203 - loadIPPluginJar : add fatfs
+2021-07-05 14:56:22,444 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,444 [INFO] PluginManager:203 - loadIPPluginJar : add fmc
+2021-07-05 14:56:22,469 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,470 [INFO] PluginManager:203 - loadIPPluginJar : add freertos
+2021-07-05 14:56:22,517 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,517 [INFO] PluginManager:203 - loadIPPluginJar : add genericplugin
+2021-07-05 14:56:22,584 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,584 [INFO] PluginManager:203 - loadIPPluginJar : add gfxmmu
+2021-07-05 14:56:22,675 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,675 [INFO] PluginManager:203 - loadIPPluginJar : add gic
+2021-07-05 14:56:22,687 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,688 [INFO] PluginManager:203 - loadIPPluginJar : add gpio
+2021-07-05 14:56:22,743 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,744 [INFO] PluginManager:203 - loadIPPluginJar : add gtzc
+2021-07-05 14:56:22,769 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,769 [INFO] PluginManager:203 - loadIPPluginJar : add hash
+2021-07-05 14:56:22,810 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,811 [INFO] PluginManager:203 - loadIPPluginJar : add i2c
+2021-07-05 14:56:22,845 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,846 [INFO] PluginManager:203 - loadIPPluginJar : add i2s
+2021-07-05 14:56:22,869 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,869 [INFO] PluginManager:203 - loadIPPluginJar : add ipddr
+2021-07-05 14:56:22,900 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,900 [INFO] PluginManager:203 - loadIPPluginJar : add lorawan
+2021-07-05 14:56:22,930 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,930 [INFO] PluginManager:203 - loadIPPluginJar : add ltdc
+2021-07-05 14:56:22,958 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,958 [INFO] PluginManager:203 - loadIPPluginJar : add mdma
+2021-07-05 14:56:22,970 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:22,970 [INFO] PluginManager:203 - loadIPPluginJar : add nvic
+2021-07-05 14:56:23,003 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,003 [INFO] PluginManager:203 - loadIPPluginJar : add opamp
+2021-07-05 14:56:23,066 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,066 [INFO] PluginManager:203 - loadIPPluginJar : add openamp
+2021-07-05 14:56:23,100 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,100 [INFO] PluginManager:203 - loadIPPluginJar : add pdm2pcm
+2021-07-05 14:56:23,114 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,116 [INFO] PluginManager:203 - loadIPPluginJar : add plateformsettings
+2021-07-05 14:56:23,137 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,138 [INFO] PluginManager:203 - loadIPPluginJar : add quadspi
+2021-07-05 14:56:23,148 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,149 [INFO] PluginManager:203 - loadIPPluginJar : add resmgrutility
+2021-07-05 14:56:23,190 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,191 [INFO] PluginManager:203 - loadIPPluginJar : add sai
+2021-07-05 14:56:23,222 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,222 [INFO] PluginManager:203 - loadIPPluginJar : add spi
+2021-07-05 14:56:23,266 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,266 [INFO] PluginManager:203 - loadIPPluginJar : add stm32_wpan
+2021-07-05 14:56:23,288 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,288 [INFO] PluginManager:203 - loadIPPluginJar : add tim
+2021-07-05 14:56:23,338 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,338 [INFO] PluginManager:203 - loadIPPluginJar : add touchsensing
+2021-07-05 14:56:23,361 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,361 [INFO] PluginManager:203 - loadIPPluginJar : add tracer_emb
+2021-07-05 14:56:23,384 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,385 [INFO] PluginManager:203 - loadIPPluginJar : add ts
+2021-07-05 14:56:23,407 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,407 [INFO] PluginManager:203 - loadIPPluginJar : add tsc
+2021-07-05 14:56:23,429 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,430 [INFO] PluginManager:203 - loadIPPluginJar : add ucpd
+2021-07-05 14:56:23,467 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:23,467 [INFO] PluginManager:203 - loadIPPluginJar : add usart
+2021-07-05 14:56:24,019 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,143 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,152 [INFO] DbMcusAds:132 - JSON generation date=Tue May 11 23:32:49 CST 2021 (1620747169502)
+2021-07-05 14:56:24,152 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,243 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-07-05 14:56:24,366 [INFO] ThirdPartyUpdaterWithRetryManager:56 - Updater plugin not ready yet. [2/15]
+2021-07-05 14:56:24,418 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,420 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,420 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,421 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-07-05 14:56:24,422 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,472 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:24,472 [WARN] ThirdParty:796 - waiting for thirdparty lock release [close project]
+2021-07-05 14:56:27,376 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:27,376 [ERROR] AbstractThirdPartyUpdaterManager:153 - class java.lang.Integer cannot be cast to class java.util.List (java.lang.Integer and java.util.List are in module java.base of loader 'bootstrap')
+2021-07-05 14:56:27,376 [INFO] ThirdParty:900 - Integrity check success = false
+2021-07-05 14:56:27,377 [INFO] IntegrityCheckThread:75 - exiting critical section [integrity check]
+2021-07-05 14:56:27,377 [INFO] IntegrityCheckThread:78 - End integrity checks thread
+2021-07-05 14:56:27,377 [INFO] ThirdParty:798 - entering critical section [close project]
+2021-07-05 14:56:27,377 [INFO] ThirdParty:809 - exiting critical section [close project]
+2021-07-05 14:56:27,381 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-07-05 14:56:27,381 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-07-05 14:56:27,492 [ERROR] Updater:1065 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2021-07-05 14:56:27,517 [INFO] Updater:1002 - Updater Version found : 6.2.1
+2021-07-05 14:56:27,536 [INFO] ApplicationProperties:181 - Using Application install path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-07-05 14:56:27,857 [INFO] MainUpdater:2661 - connection check result : 10
+2021-07-05 14:56:27,858 [INFO] MainUpdater:255 - Updater Check For Update Now.
+2021-07-05 14:56:27,858 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-07-05 14:56:27,909 [INFO] CheckServerUpdateThread:102 - End of CheckServer Thread
+2021-07-05 14:56:28,025 [INFO] MainUpdater:2661 - connection check result : 10
+2021-07-05 14:56:28,053 [INFO] MainUpdater:2661 - connection check result : 10
+2021-07-05 14:56:28,430 [INFO] MicroXplorer:442 - Change Database Path : 
+2021-07-05 14:56:28,430 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-07-05 14:56:28,430 [WARN] ThirdParty:796 - waiting for thirdparty lock release [close project]
+2021-07-05 14:56:28,430 [INFO] ThirdParty:798 - entering critical section [close project]
+2021-07-05 14:56:28,430 [INFO] ThirdParty:809 - exiting critical section [close project]
+2021-07-05 14:56:28,434 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-07-05 14:56:28,435 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 227997168 Bytes (367001600)
+2021-07-05 14:56:28,436 [INFO] MicroXplorer:442 - Change Database Path : 
+2021-07-05 14:56:28,436 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-07-05 14:56:28,436 [INFO] OpenFileManager:303 - Change cursor
+2021-07-05 14:56:28,451 [WARN] IntegrityCheckThread:59 - waiting for thirdparty lock release [integrity check]
+2021-07-05 14:56:28,451 [INFO] IntegrityCheckThread:61 - entering critical section [integrity check]
+2021-07-05 14:56:28,541 [WARN] PackLoader:226 - Cannot read IP mode file for RoweBots.I-CUBE-UNISONRTOS.5.5.0-4
+2021-07-05 14:56:28,560 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0
+2021-07-05 14:56:28,581 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.4.1.0
+2021-07-05 14:56:28,598 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.3.0.0
+2021-07-05 14:56:28,660 [WARN] PackLoader:226 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.2.0
+2021-07-05 14:56:28,700 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.0
+2021-07-05 14:56:28,710 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.2
+2021-07-05 14:56:28,719 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.17.0
+2021-07-05 14:56:28,728 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.2.0
+2021-07-05 14:56:28,738 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.1.0.0
+2021-07-05 14:56:28,769 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.1.0.0
+2021-07-05 14:56:28,816 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.8.3.0
+2021-07-05 14:56:28,933 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.1.0.0
+2021-07-05 14:56:28,942 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.6.0.0
+2021-07-05 14:56:28,953 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.2.0
+2021-07-05 14:56:28,963 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.5.2.0
+2021-07-05 14:56:28,973 [WARN] PackLoader:226 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.4.7.0
+2021-07-05 14:56:28,982 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.16.1
+2021-07-05 14:56:28,982 [INFO] ThirdParty:900 - Integrity check success = true
+2021-07-05 14:56:28,982 [INFO] IntegrityCheckThread:75 - exiting critical section [integrity check]
+2021-07-05 14:56:28,982 [INFO] IntegrityCheckThread:78 - End integrity checks thread
+2021-07-05 14:56:31,841 [INFO] Context:587 - Trying to add GPIOservice into a context  which must be forbidden
+2021-07-05 14:56:32,353 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-07-05 14:56:32,353 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-07-05 14:56:32,353 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,356 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,357 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,358 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-07-05 14:56:32,363 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-07-05 14:56:32,364 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-07-05 14:56:32,364 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-07-05 14:56:32,368 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-07-05 14:56:32,368 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-07-05 14:56:32,479 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-07-05 14:56:32,480 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-07-05 14:56:32,480 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-07-05 14:56:32,486 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-07-05 14:56:32,486 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-07-05 14:56:32,486 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-07-05 14:56:32,486 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-07-05 14:56:32,486 [WARN] ModelIntegratedComponent:182 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-07-05 14:56:32,493 [WARN] ApiManager:294 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-07-05 14:56:32,493 [WARN] ApiManager:294 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-07-05 14:56:32,493 [WARN] ApiManager:294 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-07-05 14:56:32,494 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.0: no header file found
+2021-07-05 14:56:32,495 [WARN] ApiManager:294 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.2: no header file found
+2021-07-05 14:56:32,496 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.2.0: no header file found
+2021-07-05 14:56:32,783 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (48MHZClocksFreq_Value) has invalid value (84000000)
+2021-07-05 14:56:32,784 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2021-07-05 14:56:33,116 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 302274440 Bytes (367001600)
+2021-07-05 14:56:33,117 [INFO] DbMcusXml:100 - Load MCU database from D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/families.xml
+2021-07-05 14:56:33,855 [INFO] DbMcusJson:94 - JSON generation date=Mon Jun 07 16:53:21 CST 2021 (1623056001)
+2021-07-05 14:56:34,396 [INFO] DbMcus:175 - Found 1906 MCUs (1866 are supported by CubeMX, 1866 are visible in CubeMX)
+2021-07-05 14:56:34,404 [INFO] ApiDb:251 - Load user favorites file C:\Users\Quar-Tzer-top/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2021-07-05 14:56:34,404 [INFO] ApiDb:255 - User favorites MCUs=[]
+2021-07-05 14:56:34,405 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2021-07-05 14:56:34,526 [WARN] ThirdParty:762 - waiting for thirdparty lock release [change project]
+2021-07-05 14:56:34,526 [INFO] ThirdParty:764 - entering critical section [change project]
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 3.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 4.1.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 1.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 1.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.0.0
+2021-07-05 14:56:34,526 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 8.3.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 1.0.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 6.0.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.2.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.2.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 5.2.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.2
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.17.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 4.7.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.16.1
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-07-05 14:56:34,527 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.2.0
+2021-07-05 14:56:34,528 [INFO] ThirdParty:770 - exiting critical section [change project]
+2021-07-05 14:56:35,371 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-07-05 14:56:35,373 [INFO] PinOutPanel:1435 - setPackage(STM32F407ZGTx,LQFP144)
+2021-07-05 14:56:35,928 [INFO] UtilMem:74 - Before build in PCC Used Memory: 326115080 Bytes (636485632)
+2021-07-05 14:56:36,579 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/Quar-Tzer-top/.stm32cubemx/plugins/power
+2021-07-05 14:56:36,623 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/Quar-Tzer-top/.stm32cubemx/plugins/power
+2021-07-05 14:56:36,692 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/Quar-Tzer-top/.stm32cubemx/plugins/power
+2021-07-05 14:56:36,696 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/Quar-Tzer-top/.stm32cubemx/plugins/power
+2021-07-05 14:56:36,887 [INFO] UtilMem:74 - After build in PCC Used Memory: 297625160 Bytes (636485632)
+2021-07-05 14:56:36,916 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,916 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,916 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,916 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,917 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,918 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,919 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,919 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,919 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,919 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,920 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,920 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,920 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,920 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,921 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,921 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,921 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,922 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,922 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,922 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,922 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,923 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,923 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,923 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,924 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,924 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,924 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,925 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,925 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,925 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,926 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,926 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,926 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,927 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,927 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,928 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,928 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,929 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,929 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,930 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,930 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,931 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,931 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,932 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,933 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,934 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:36,934 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-07-05 14:56:37,036 [INFO] ApiDbMcu:458 - Load IP Config File for PDM2PCM
+2021-07-05 14:56:37,069 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2021-07-05 14:56:37,210 [INFO] OpenFileManager:323 - Restore cursor
+2021-07-05 15:34:45,372 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x153,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-07-05 15:34:58,580 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 305019480 Bytes (636485632)
+2021-07-05 15:34:58,678 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 325464664 Bytes (636485632)
+2021-07-05 15:34:59,697 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 437139840 Bytes (636485632)
+2021-07-05 15:35:00,336 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 15:35:00,337 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 15:35:00,338 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 15:35:00,339 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 15:35:01,332 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 15:35:01,707 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 15:35:01,899 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 15:35:01,985 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 15:35:02,016 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 15:35:02,071 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 15:35:03,040 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:35:03,117 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 15:35:03,206 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 15:35:03,234 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 15:35:03,287 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 15:35:03,288 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:35:03,336 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 15:35:03,419 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 15:35:03,468 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 15:35:03,517 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 15:35:03,518 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:35:03,529 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 15:35:03,608 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 15:35:03,611 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 15:35:03,661 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 15:35:03,663 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:35:03,673 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 15:35:03,749 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 15:35:03,754 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 15:35:03,801 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 15:35:03,850 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 15:35:03,932 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 15:35:03,940 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 15:35:04,018 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 15:35:04,056 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 15:35:04,135 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 15:35:04,143 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 15:35:04,182 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 15:35:04,200 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 15:35:04,276 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 15:35:04,325 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 15:35:04,383 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 15:35:04,396 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 15:35:04,480 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 15:35:05,538 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 519mS.
+2021-07-05 15:35:05,542 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 15:35:06,018 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 15:35:06,061 [INFO] ApiDbMcu:458 - Load IP Config File for FATFS
+2021-07-05 15:35:06,099 [INFO] ApiDbMcu:458 - Load IP Config File for FREERTOS
+2021-07-05 15:35:06,134 [INFO] ApiDbMcu:458 - Load IP Config File for LIBJPEG
+2021-07-05 15:35:06,239 [INFO] ApiDbMcu:458 - Load IP Config File for LWIP
+2021-07-05 15:35:06,283 [INFO] ApiDbMcu:458 - Load IP Config File for MBEDTLS
+2021-07-05 15:35:06,343 [INFO] ApiDbMcu:458 - Load IP Config File for USB_DEVICE
+2021-07-05 15:35:06,358 [INFO] ApiDbMcu:458 - Load IP Config File for USB_HOST
+2021-07-05 15:35:09,542 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 4000mS.
+2021-07-05 15:35:09,543 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 15:35:09,546 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 15:43:07,710 [INFO] DbMcusDocs:143 - JSON generation date=Mon Jun 07 16:53:21 CST 2021 (1623056001)
+2021-07-05 15:43:07,968 [INFO] DbMcusDocs:79 - Found 669 MCUs documents
+2021-07-05 15:48:39,118 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x189,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-07-05 15:49:23,054 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 487277304 Bytes (730857472)
+2021-07-05 15:49:23,160 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 508248824 Bytes (730857472)
+2021-07-05 15:49:23,866 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 573782776 Bytes (730857472)
+2021-07-05 15:49:24,165 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 15:49:24,166 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 15:49:24,167 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 15:49:24,169 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 15:49:25,171 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 15:49:25,277 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 15:49:25,348 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 15:49:25,520 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 15:49:25,524 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 15:49:25,575 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 15:49:26,181 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:49:26,192 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 15:49:26,265 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 15:49:26,273 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 15:49:26,331 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 15:49:26,333 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:49:26,344 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 15:49:26,412 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 15:49:26,416 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 15:49:26,459 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 15:49:26,460 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:49:26,472 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 15:49:26,577 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 15:49:26,581 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 15:49:26,634 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 15:49:26,636 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 15:49:26,647 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 15:49:26,719 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 15:49:26,723 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 15:49:26,773 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 15:49:26,794 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 15:49:26,876 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 15:49:26,880 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 15:49:26,933 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 15:49:26,945 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 15:49:27,014 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 15:49:27,017 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 15:49:27,053 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 15:49:27,064 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 15:49:27,138 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 15:49:27,188 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 15:49:27,252 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 15:49:27,260 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 15:49:27,346 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 15:49:27,984 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 83mS.
+2021-07-05 15:49:27,987 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 15:49:28,358 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 15:49:30,024 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 2037mS.
+2021-07-05 15:49:30,025 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 15:49:30,039 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 16:10:49,279 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 375194720 Bytes (851443712)
+2021-07-05 16:10:49,371 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 396166240 Bytes (851443712)
+2021-07-05 16:11:01,746 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 525667424 Bytes (851443712)
+2021-07-05 16:11:02,062 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 16:11:02,062 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 16:11:02,062 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:11:02,062 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-07-05 16:11:02,063 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 16:11:02,064 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 16:11:03,043 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 16:11:03,111 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 16:11:03,177 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 16:11:03,222 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 16:11:03,226 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 16:11:03,268 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 16:11:04,117 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:11:04,303 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c_save
+2021-07-05 16:11:04,354 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c
+2021-07-05 16:11:04,361 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h_save
+2021-07-05 16:11:04,410 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h
+2021-07-05 16:11:04,412 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:11:04,424 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 16:11:04,481 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 16:11:04,485 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 16:11:04,530 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 16:11:04,533 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:11:04,550 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 16:11:04,616 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 16:11:04,620 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 16:11:04,661 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 16:11:04,663 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:11:04,675 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 16:11:04,784 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 16:11:04,790 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 16:11:04,841 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 16:11:04,843 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:11:04,854 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 16:11:04,932 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 16:11:04,936 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 16:11:04,981 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 16:11:05,001 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 16:11:05,084 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 16:11:05,092 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 16:11:05,149 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 16:11:05,163 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 16:11:05,226 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 16:11:05,230 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 16:11:05,265 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 16:11:05,276 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 16:11:05,348 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 16:11:05,388 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 16:11:05,443 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 16:11:05,451 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 16:11:05,531 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 16:11:06,108 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 64mS.
+2021-07-05 16:11:06,110 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 16:11:06,385 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 16:11:07,938 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1828mS.
+2021-07-05 16:11:07,938 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 16:11:07,941 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 16:26:45,442 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,571x321,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-07-05 16:26:50,218 [INFO] Gpio:248 - dependency for GPIO [FSMC, RCC, SPI3, SYS, USART2]
+2021-07-05 16:30:31,319 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-07-05 16:31:05,272 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 836173048 Bytes (1070596096)
+2021-07-05 16:31:05,359 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 857766800 Bytes (1070596096)
+2021-07-05 16:31:06,101 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 370647176 Bytes (1070596096)
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 16:31:06,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 16:31:06,474 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 16:31:06,474 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 16:31:06,474 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-07-05 16:31:06,475 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 16:31:06,476 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 16:31:06,517 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 16:31:06,517 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:31:06,517 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 16:31:06,518 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:31:06,518 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:31:06,518 [INFO] Argument:278 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_MEDIUM
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_MEDIUM
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 16:31:06,519 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 16:31:06,520 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 16:31:06,522 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream6
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream6
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 16:31:06,522 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:31:06,522 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:31:06,522 [INFO] Argument:278 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_MEDIUM
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_MEDIUM
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 16:31:06,523 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 16:31:06,524 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 16:31:07,355 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 16:31:07,472 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 16:31:07,566 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 16:31:07,634 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 16:31:07,638 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 16:31:07,688 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 16:31:09,088 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:31:09,261 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c_save
+2021-07-05 16:31:09,347 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c
+2021-07-05 16:31:09,352 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h_save
+2021-07-05 16:31:09,405 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h
+2021-07-05 16:31:09,407 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:31:09,420 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 16:31:09,490 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 16:31:09,494 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 16:31:09,543 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 16:31:09,544 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:31:09,557 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 16:31:09,644 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 16:31:09,649 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 16:31:09,693 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 16:31:09,694 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:31:09,706 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 16:31:09,812 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 16:31:09,818 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 16:31:09,864 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 16:31:09,866 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:31:09,881 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 16:31:09,975 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 16:31:09,982 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 16:31:10,037 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 16:31:10,060 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 16:31:10,154 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 16:31:10,158 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 16:31:10,212 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 16:31:10,227 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 16:31:10,295 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 16:31:10,298 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 16:31:10,338 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 16:31:10,351 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 16:31:10,422 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 16:31:10,467 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 16:31:10,528 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 16:31:10,536 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 16:31:10,623 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 16:31:11,310 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 89mS.
+2021-07-05 16:31:11,314 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 16:31:11,617 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 16:31:13,272 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1958mS.
+2021-07-05 16:31:13,273 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 16:31:13,275 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 16:34:58,259 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 493411776 Bytes (1070596096)
+2021-07-05 16:34:58,340 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 514909632 Bytes (1070596096)
+2021-07-05 16:34:59,073 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 622386624 Bytes (1070596096)
+2021-07-05 16:34:59,466 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 16:34:59,467 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 16:34:59,467 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-07-05 16:34:59,468 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 16:34:59,470 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 16:34:59,521 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 16:34:59,521 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 16:34:59,521 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:34:59,521 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 16:34:59,521 [INFO] Argument:288 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 16:34:59,521 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:34:59,521 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:34:59,522 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:34:59,522 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:34:59,523 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 16:34:59,524 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 16:34:59,525 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 16:34:59,525 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:34:59,525 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream6
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream6
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 16:34:59,526 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_4
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 16:34:59,526 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:34:59,526 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 16:34:59,527 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 16:34:59,527 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 16:34:59,528 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:34:59,529 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 16:34:59,529 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 16:34:59,529 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 16:35:00,357 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 16:35:00,406 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 16:35:00,488 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 16:35:00,565 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 16:35:00,569 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 16:35:00,617 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 16:35:01,392 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:35:01,450 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c_save
+2021-07-05 16:35:01,498 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c
+2021-07-05 16:35:01,502 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h_save
+2021-07-05 16:35:01,545 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h
+2021-07-05 16:35:01,547 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:35:01,557 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 16:35:01,617 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 16:35:01,621 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 16:35:01,666 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 16:35:01,668 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:35:01,679 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 16:35:01,747 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 16:35:01,752 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 16:35:01,793 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 16:35:01,795 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:35:01,806 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 16:35:01,912 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 16:35:01,916 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 16:35:01,959 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 16:35:01,961 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:35:01,973 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 16:35:02,041 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 16:35:02,044 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 16:35:02,087 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 16:35:02,107 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 16:35:02,182 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 16:35:02,186 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 16:35:02,230 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 16:35:02,245 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 16:35:02,309 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 16:35:02,312 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 16:35:02,349 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 16:35:02,360 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 16:35:02,423 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 16:35:02,488 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 16:35:02,554 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 16:35:02,564 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 16:35:02,665 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 16:35:03,213 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 72mS.
+2021-07-05 16:35:03,216 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 16:35:03,502 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 16:35:05,087 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1871mS.
+2021-07-05 16:35:05,088 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 16:35:05,089 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 16:58:02,925 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 817704872 Bytes (1073741824)
+2021-07-05 16:58:03,021 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 839724968 Bytes (1073741824)
+2021-07-05 16:58:03,921 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 438692440 Bytes (1073741824)
+2021-07-05 16:58:04,243 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 16:58:04,244 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 16:58:04,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 16:58:04,246 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 16:58:05,165 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 16:58:05,322 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 16:58:05,407 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 16:58:05,477 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 16:58:05,481 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 16:58:05,528 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 16:58:06,134 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:58:06,145 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 16:58:06,227 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 16:58:06,230 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 16:58:06,280 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 16:58:06,282 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:58:06,294 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 16:58:06,364 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 16:58:06,368 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 16:58:06,415 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 16:58:06,416 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:58:06,429 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 16:58:06,540 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 16:58:06,545 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 16:58:06,592 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 16:58:06,594 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 16:58:06,605 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 16:58:06,683 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 16:58:06,686 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 16:58:06,729 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 16:58:06,750 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 16:58:06,829 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 16:58:06,833 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 16:58:06,877 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 16:58:06,890 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 16:58:06,956 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 16:58:06,959 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 16:58:07,001 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 16:58:07,013 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 16:58:07,080 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 16:58:07,123 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 16:58:07,178 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 16:58:07,186 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 16:58:07,262 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 16:58:07,920 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 68mS.
+2021-07-05 16:58:07,923 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 16:58:08,223 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 16:58:10,030 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 2107mS.
+2021-07-05 16:58:10,031 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 16:58:10,034 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 17:54:07,057 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 520783000 Bytes (1073741824)
+2021-07-05 17:54:07,144 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 542280856 Bytes (1073741824)
+2021-07-05 17:54:07,887 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 611486872 Bytes (1073741824)
+2021-07-05 17:54:08,294 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 17:54:08,294 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 17:54:08,295 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:54:08,295 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:54:08,295 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:54:08,295 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:54:08,295 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 17:54:08,296 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 17:54:08,296 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 17:54:08,296 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 17:54:08,296 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-07-05 17:54:08,297 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 17:54:08,298 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 17:54:09,198 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 17:54:09,324 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 17:54:09,421 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 17:54:09,482 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 17:54:09,486 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 17:54:09,542 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 17:54:10,386 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:54:10,443 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c_save
+2021-07-05 17:54:10,514 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c
+2021-07-05 17:54:10,517 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h_save
+2021-07-05 17:54:10,563 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h
+2021-07-05 17:54:10,564 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:54:10,576 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 17:54:10,649 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 17:54:10,654 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 17:54:10,713 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 17:54:10,715 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:54:10,728 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 17:54:10,818 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 17:54:10,822 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 17:54:10,870 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 17:54:10,872 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:54:10,885 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 17:54:10,994 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 17:54:10,998 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 17:54:11,043 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 17:54:11,044 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:54:11,058 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 17:54:11,127 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 17:54:11,132 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 17:54:11,179 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 17:54:11,201 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 17:54:11,283 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 17:54:11,287 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 17:54:11,372 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 17:54:11,389 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 17:54:11,475 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 17:54:11,479 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 17:54:11,545 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 17:54:11,560 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 17:54:11,640 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 17:54:11,685 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 17:54:11,750 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 17:54:11,759 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 17:54:11,837 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 17:54:12,394 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 68mS.
+2021-07-05 17:54:12,397 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 17:54:12,693 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 17:54:14,432 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 2035mS.
+2021-07-05 17:54:14,432 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 17:54:14,434 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 17:56:16,071 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 509824048 Bytes (1073741824)
+2021-07-05 17:56:16,167 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 531321904 Bytes (1073741824)
+2021-07-05 17:56:16,911 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 598953008 Bytes (1073741824)
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 17:56:17,304 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-07-05 17:56:17,305 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 17:56:17,306 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 17:56:17,334 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 17:56:17,335 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream0
+2021-07-05 17:56:17,335 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream0
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 17:56:17,335 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_0
+2021-07-05 17:56:17,335 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_0
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 17:56:17,335 [INFO] Argument:288 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 17:56:17,335 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 17:56:17,335 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 17:56:17,335 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : Modevalue: DMA_NORMAL
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 17:56:17,336 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 17:56:17,337 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 17:56:17,338 [INFO] Argument:278 - Argument : hdmavalue: null
+2021-07-05 17:56:17,338 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 17:56:17,338 [INFO] Argument:278 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 17:56:17,338 [INFO] Argument:288 - Argument : Instancevalue: DMA1_Stream5
+2021-07-05 17:56:17,338 [INFO] Argument:278 - Argument : Initvalue: null
+2021-07-05 17:56:17,338 [INFO] Argument:280 - 	 sub Args: 
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : Channelvalue: DMA_CHANNEL_0
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : Channelvalue: DMA_CHANNEL_0
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2021-07-05 17:56:17,339 [INFO] Argument:278 - Argument : Modevalue: DMA_CIRCULAR
+2021-07-05 17:56:17,339 [INFO] Argument:288 - Argument : Modevalue: DMA_CIRCULAR
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : FIFOThresholdvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : FIFOThresholdvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : MemBurstvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : MemBurstvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : PeriphBurstvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : PeriphBurstvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : Lockvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : Lockvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : Statevalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : Statevalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : Parentvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:288 - Argument : Parentvalue: null
+2021-07-05 17:56:17,340 [INFO] Argument:278 - Argument : XferCpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:288 - Argument : XferCpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:278 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:288 - Argument : XferHalfCpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:278 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:288 - Argument : XferM1CpltCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:278 - Argument : XferErrorCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:288 - Argument : XferErrorCallbackvalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:278 - Argument : ErrorCodevalue: null
+2021-07-05 17:56:17,341 [INFO] Argument:288 - Argument : ErrorCodevalue: null
+2021-07-05 17:56:18,298 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 17:56:18,361 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 17:56:18,424 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 17:56:18,482 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 17:56:18,486 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 17:56:18,531 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 17:56:19,341 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:56:19,404 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c_save
+2021-07-05 17:56:19,451 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\dma.c
+2021-07-05 17:56:19,455 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h_save
+2021-07-05 17:56:19,501 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\dma.h
+2021-07-05 17:56:19,503 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:56:19,515 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 17:56:19,575 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 17:56:19,579 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 17:56:19,642 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 17:56:19,645 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:56:19,669 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 17:56:19,777 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 17:56:19,792 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 17:56:19,839 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 17:56:19,842 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:56:19,856 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 17:56:19,977 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 17:56:19,982 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 17:56:20,031 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 17:56:20,033 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:56:20,048 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 17:56:20,124 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 17:56:20,128 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 17:56:20,174 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 17:56:20,197 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 17:56:20,270 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 17:56:20,274 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 17:56:20,322 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 17:56:20,336 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 17:56:20,405 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 17:56:20,408 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 17:56:20,452 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 17:56:20,465 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 17:56:20,565 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 17:56:20,607 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 17:56:20,667 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 17:56:20,675 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 17:56:20,755 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 17:56:21,443 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 80mS.
+2021-07-05 17:56:21,446 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 17:56:21,782 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 17:56:23,401 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1955mS.
+2021-07-05 17:56:23,402 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 17:56:23,404 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 17:58:53,156 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 499241552 Bytes (1073741824)
+2021-07-05 17:58:53,236 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 520213072 Bytes (1073741824)
+2021-07-05 17:58:53,960 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 587321936 Bytes (1073741824)
+2021-07-05 17:58:54,235 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 17:58:54,235 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 17:58:54,236 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 17:58:54,237 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 17:58:54,238 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 17:58:55,249 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 17:58:55,312 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 17:58:55,376 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 17:58:55,427 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 17:58:55,431 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 17:58:55,476 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 17:58:56,059 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:58:56,070 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 17:58:56,138 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 17:58:56,143 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 17:58:56,191 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 17:58:56,192 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:58:56,205 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 17:58:56,282 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 17:58:56,286 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 17:58:56,329 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 17:58:56,331 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:58:56,344 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 17:58:56,473 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 17:58:56,479 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 17:58:56,530 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 17:58:56,532 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 17:58:56,548 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 17:58:56,645 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 17:58:56,650 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 17:58:56,707 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 17:58:56,730 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 17:58:56,813 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 17:58:56,817 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 17:58:56,865 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 17:58:56,879 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 17:58:56,957 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 17:58:56,960 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 17:58:56,999 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 17:58:57,011 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 17:58:57,086 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 17:58:57,129 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 17:58:57,180 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 17:58:57,188 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 17:58:57,264 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 17:58:57,816 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 64mS.
+2021-07-05 17:58:57,819 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 17:58:58,286 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 17:58:59,767 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1948mS.
+2021-07-05 17:58:59,768 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 17:58:59,771 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-07-05 18:23:11,868 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 422284024 Bytes (1073741824)
+2021-07-05 18:23:11,969 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 443781880 Bytes (1073741824)
+2021-07-05 18:23:12,687 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 513510136 Bytes (1073741824)
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SPI
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: FSMC
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-07-05 18:23:13,053 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-07-05 18:23:13,054 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-07-05 18:23:13,055 [INFO] CodeGenerator:641 - code generatio: config db path: D:\APP\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-07-05 18:23:14,082 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp_save
+2021-07-05 18:23:14,195 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\license.tmp
+2021-07-05 18:23:14,272 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c_save
+2021-07-05 18:23:14,349 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\gpio.c
+2021-07-05 18:23:14,353 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h_save
+2021-07-05 18:23:14,412 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\gpio.h
+2021-07-05 18:23:15,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 18:23:15,013 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c_save
+2021-07-05 18:23:15,084 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\fsmc.c
+2021-07-05 18:23:15,091 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h_save
+2021-07-05 18:23:15,140 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\fsmc.h
+2021-07-05 18:23:15,143 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 18:23:15,154 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c_save
+2021-07-05 18:23:15,230 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\spi.c
+2021-07-05 18:23:15,238 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h_save
+2021-07-05 18:23:15,285 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\spi.h
+2021-07-05 18:23:15,287 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 18:23:15,299 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c_save
+2021-07-05 18:23:15,416 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\tim.c
+2021-07-05 18:23:15,420 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h_save
+2021-07-05 18:23:15,463 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\tim.h
+2021-07-05 18:23:15,465 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-07-05 18:23:15,476 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c_save
+2021-07-05 18:23:15,553 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\usart.c
+2021-07-05 18:23:15,557 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h_save
+2021-07-05 18:23:15,606 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\usart.h
+2021-07-05 18:23:15,625 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c_save
+2021-07-05 18:23:15,706 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_it.c
+2021-07-05 18:23:15,710 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h_save
+2021-07-05 18:23:15,756 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_it.h
+2021-07-05 18:23:15,770 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c_save
+2021-07-05 18:23:15,840 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\stm32f4xx_hal_msp.c
+2021-07-05 18:23:15,843 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp_save
+2021-07-05 18:23:15,879 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\MXTmpFiles\system.tmp
+2021-07-05 18:23:15,891 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h_save
+2021-07-05 18:23:15,956 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\stm32f4xx_hal_conf.h
+2021-07-05 18:23:16,006 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h_save
+2021-07-05 18:23:16,057 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Inc\main.h
+2021-07-05 18:23:16,065 [INFO] CodeEngine:229 - oldGeneratedFile, D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c_save
+2021-07-05 18:23:16,155 [INFO] CodeEngine:247 - Generated code: D:\Work-Ele\A-KEIL\BDS5_OSC\Core\Src\main.c
+2021-07-05 18:23:16,799 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 66mS.
+2021-07-05 18:23:16,802 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-07-05 18:23:17,099 [INFO] ConfigFileManager:1242 - The Die is : DIE413
+2021-07-05 18:23:18,782 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 1980mS.
+2021-07-05 18:23:18,783 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-07-05 18:23:18,784 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.

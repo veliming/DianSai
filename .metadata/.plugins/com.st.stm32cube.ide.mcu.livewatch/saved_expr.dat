@@ -1,11 +1,5 @@
-Voltage_Front
-ToV
-pid.ek
-pid.ek_1
-pid.ek_2
-pid.res
-Voltage_Behind
-Encoder
-Target
-Pwm
-(((ToV1/4)/3.3)*4096)
+ads_data
+volt1
+volt2
+volt1[0]
+volt1[1]

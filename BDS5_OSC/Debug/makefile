@@ -9,10 +9,12 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Drivers/TFT_Driver/Src/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/LCDandTOUCH/Scr/subdir.mk
+-include Drivers/ADS8688/Scr/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
--include Core/Inc/subdir.mk
 -include subdir.mk
 -include objects.mk
 

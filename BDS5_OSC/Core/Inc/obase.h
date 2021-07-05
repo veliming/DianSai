@@ -53,6 +53,38 @@ typedef __I uint8_t vuc8;
 #define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2))
 #define MEM_ADDR(addr)  *((volatile unsigned long  *)(addr))
 #define BIT_ADDR(addr, bitnum)   MEM_ADDR(BITBAND(addr, bitnum))
+
+// LED电平设置 0-亮 1-灭
+#define LED0(n) (n?HAL_GPIO_WritePin(LED0_GPIO_Port,LED0_Pin,GPIO_PIN_SET):HAL_GPIO_WritePin(LED0_GPIO_Port,LED0_Pin,GPIO_PIN_RESET))
+#define LED0_T (HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin))
+#define LED0_ON LED0(0)
+#define LED0_OFF LED0(1)
+#define LED1(n) (n?HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_SET):HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_RESET))
+#define LED1_T (HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin))
+#define LED1_ON LED1(0)
+#define LED1_OFF LED1(1)
+#define LED2(n) (n?HAL_GPIO_WritePin(LED2_GPIO_Port,LED2_Pin,GPIO_PIN_SET):HAL_GPIO_WritePin(LED2_GPIO_Port,LED2_Pin,GPIO_PIN_RESET))
+#define LED2_T (HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin))
+#define LED2_ON LED2(0)
+#define LED2_OFF LED2(1)
+
+// 自定义delay函数，兼容部分硬件库
+void delay_init(u8 SYSCLK);
+void delay_ms(u16 nms);
+void delay_us(u32 nus);
+void delay_ns (u8 t);
+
+/*
+// 按键部分常用
+// 不使用时注释
+#define KEY0 HAL_GPIO_ReadPin(KEY0_GPIO_Port,KEY0_Pin)//读取按键0
+#define KEY1 HAL_GPIO_ReadPin(KEY1_GPIO_Port,KEY1_Pin)//读取按键1
+#define KEY2 HAL_GPIO_ReadPin(KEY2_GPIO_Port,KEY2_Pin)//读取按键2
+#define KEY0_PRES 1
+#define KEY1_PRES 2
+#define KEY2_PRES 3
+u8 KEY_Scan(u8 mode); //按键扫描函数*/
+
 //IO口地址映射
 #define GPIOA_ODR_Addr    (GPIOA_BASE+20) //0x40020014
 #define GPIOB_ODR_Addr    (GPIOB_BASE+20) //0x40020414

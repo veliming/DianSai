@@ -1,6 +1,7 @@
-19:14:10 **** Incremental Build of configuration Debug for project BDS5_OSC ****
+00:04:24 **** Incremental Build of configuration Debug for project BDS5_OSC ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__TARGET_FPU_VFP -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP" -I"D:/Work-Ele/A-KEIL/BDS5_OSC/Drivers/DSP/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__TARGET_FPU_VFP -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/DSP -I../Drivers/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/LCDandTOUCH/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__TARGET_FPU_VFP -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/DSP -I../Drivers/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/LCDandTOUCH/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
 arm-none-eabi-gcc -o "BDS5_OSC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS5_OSC\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS5_OSC.map" -Wl,--gc-sections -static "D:\Work-Ele\A-KEIL\BDS5_OSC\Drivers\DSP\libarm_cortexM4lf_math.a" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 гд???????????гд??????????? BDS5_OSC.elf
  
@@ -8,7 +9,7 @@ arm-none-eabi-objdump -h -S  BDS5_OSC.elf  > "BDS5_OSC.list"
 arm-none-eabi-objcopy  -O binary  BDS5_OSC.elf  "BDS5_OSC.bin"
 arm-none-eabi-size   BDS5_OSC.elf 
    text	   data	    bss	    dec	    hex	filename
-  38404	    488	   5456	  44348	   ad3c	BDS5_OSC.elf
+  44536	    488	   3144	  48168	   bc28	BDS5_OSC.elf
 гд???????????гд????? default.size.stdout
  
 гд???????????гд????? BDS5_OSC.bin
@@ -16,5 +17,5 @@ arm-none-eabi-size   BDS5_OSC.elf
 гд???????????гд????? BDS5_OSC.list
  
 
-19:14:12 Build Finished. 0 errors, 0 warnings. (took 1s.435ms)
+00:04:25 Build Finished. 0 errors, 0 warnings. (took 1s.498ms)
 

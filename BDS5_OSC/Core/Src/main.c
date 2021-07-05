@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -27,15 +28,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "arm_math.h"
 #include "ADS8688.h"
 #include "stdio.h"
+#include "hmi_user_uart.h"
+#include "hmi_driver.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
-#define default_interval 500
 
 // macro and pattern to print binary numbers
 #define BYTE_TO_BIN_PAT "%c%c%c%c%c%c%c%c"
@@ -65,17 +65,17 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char buf[100];
-int count=0;
-// Timing Variables
-unsigned int current=0, previous=0, interval=default_interval;
 
 // ADS variables
 ADS8688 ads;
 uint16_t ads_data[2];
-//float volt[2] = {0};
-float volt1[400] = {0};
-float volt2[400] = {0};
+float volt[2];
+
+uint8_t rxbuf[2][4] = {0};
+uint8_t txbuf[2] = {0x00, 0x00};
+
+uint8_t CH1_ON=0;
+uint8_t CH2_ON=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -118,6 +118,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_FSMC_Init();
   MX_TIM3_Init();
   MX_SPI3_Init();
@@ -125,9 +126,11 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM4_Init();
   MX_TIM5_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   ADS8688_Init(&ads, &hspi3, SPI3_CS_GPIO_Port, SPI3_CS_Pin);
   HAL_TIM_Base_Start_IT(&htim2);
+  TFT_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -138,10 +141,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		  for(int i=0; i<2; i++) {
-			  //printf("CHN_%d: %u %u    "BYTE_TO_BIN_PAT" "BYTE_TO_BIN_PAT"  %f\n", i, (uint16_t)(ads_data[0]), (uint16_t)(ads_data[1]) ,  BYTE_TO_BIN(ads_data[1]), BYTE_TO_BIN(ads_data[0]), volt[i]);
-
-		  }
+	  printf("%f %f\n\r",volt[0],volt[1]);
 
 
   }

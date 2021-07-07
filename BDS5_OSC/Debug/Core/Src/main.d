@@ -32,10 +32,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/dma.h ../Core/Inc/main.h ../Core/Inc/spi.h ../Core/Inc/tim.h \
  ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/fsmc.h \
- ../Drivers/ADS8688/Inc/ADS8688.h \
+ ../Drivers/ADS8688/Inc/ADS8688.h ../Drivers/TFT_Driver/Inc/hmi_driver.h \
  ../Drivers/TFT_Driver/Inc/hmi_user_uart.h ../Core/Inc/stm32f4xx_it.h \
- ../Core/Inc/obase.h ../Drivers/TFT_Driver/Inc/hmi_driver.h \
- ../Drivers/TFT_Driver/Inc/hmi_user_uart.h
+ ../Core/Inc/obase.h ../Drivers/LCDandTOUCH/Inc/lcd.h
 
 ../Core/Inc/main.h:
 
@@ -117,12 +116,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/ADS8688/Inc/ADS8688.h:
 
+../Drivers/TFT_Driver/Inc/hmi_driver.h:
+
 ../Drivers/TFT_Driver/Inc/hmi_user_uart.h:
 
 ../Core/Inc/stm32f4xx_it.h:
 
 ../Core/Inc/obase.h:
 
-../Drivers/TFT_Driver/Inc/hmi_driver.h:
-
-../Drivers/TFT_Driver/Inc/hmi_user_uart.h:
+../Drivers/LCDandTOUCH/Inc/lcd.h:

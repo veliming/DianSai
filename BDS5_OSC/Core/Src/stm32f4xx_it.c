@@ -25,10 +25,10 @@
 /* USER CODE BEGIN Includes */
 #include "ADS8688.h"
 #include "usart.h"
-#include "hmi_user_uart.h"
-//#include "dac.h"
 #include "spi.h"
 #include "obase.h"
+#include "string.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,14 +48,30 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
+int8_t CH=0;
+
 extern ADS8688 ads;
 extern uint16_t ads_data[2];
-extern float volt[2];
-extern uint8_t rxbuf[2][4];
-extern uint16_t ads_data[2];
-extern uint8_t txbuf[2];
-uint8_t CH=0;
 
+extern float volt[2];
+
+extern uint8_t rxbuf[2][4];
+extern uint8_t txbuf[2];
+extern uint8_t CH0_ON;
+extern uint8_t CH1_ON;
+extern uint8_t TriggerCH;
+extern int16_t Level_Trigger;
+extern uint16_t Level_Trigger_two;
+
+extern int16_t savedata0[400];
+extern int16_t savedata1[400];
+
+uint8_t saveflag;
+
+uint16_t savenum=10;
+
+extern uint8_t CH0_num[828];
+extern uint8_t CH1_num[414];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,11 +89,7 @@ extern DMA_HandleTypeDef hdma_spi3_rx;
 extern DMA_HandleTypeDef hdma_spi3_tx;
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim5;
-extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart2_tx;
-extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
 
@@ -94,7 +106,6 @@ void NMI_Handler(void)
   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
 
   /* USER CODE END NonMaskableInt_IRQn 0 */
-  HAL_RCC_NMI_IRQHandler();
   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
   while (1)
   {
@@ -288,8 +299,59 @@ void TIM2_IRQHandler(void)
   PAout(15) = 0;
   HAL_SPI_TransmitReceive_DMA(&hspi3, txbuf, rxbuf[0], 2);
 
-  volt[0] = (((float)(ads_data[0]+3-32767))*10.24/65535.0);
-  volt[1] = (((float)(ads_data[1]-32767))*10.24/65535.0);
+  //volt[0] = (((float)(ads_data[0]+3-32767))*10.24/65535.0);
+  //volt[1] = (((float)(ads_data[1]-32767))*10.24/65535.0);
+  if((ads_data[0]>Level_Trigger_two)&&CH0_ON==1&&TriggerCH==0)
+  {
+	  saveflag=1;
+  }
+  else if((ads_data[1]>Level_Trigger_two)&&CH1_ON==1&&TriggerCH==1)
+  {
+	  saveflag=1;
+  }
+  else{}
+
+
+  if(saveflag==1&&CH0_ON==1&&CH1_ON==1)
+  {
+	  CH0_num[savenum]=ads_data[0]>>8;
+	  CH1_num[savenum]=ads_data[1]>>8;
+	  savenum++;
+  }
+  else if(saveflag==1&&CH0_ON==1&&CH1_ON==0)
+  {
+	  CH0_num[savenum]=ads_data[0]>>8;
+	  savenum++;
+  }
+  else if(saveflag==1&&CH0_ON==0&&CH1_ON==1)
+  {
+	  CH1_num[savenum]=ads_data[1]>>8;
+	  savenum++;
+  }
+  else{}
+
+  if(savenum>=410)
+  {
+	  saveflag=0;
+	  savenum=10;
+	  if(CH0_ON&&CH1_ON==0)
+	  {
+		  HAL_UART_Transmit_DMA(&huart2, (uint8_t*)&CH0_num[0], 414);
+	  }
+	  else if(CH0_ON==0&&CH1_ON==1)
+	  {
+		  HAL_UART_Transmit_DMA(&huart2, (uint8_t*)&CH1_num[0], 414);
+	  }
+	  else if(CH0_ON==1&&CH1_ON==1)
+	  {
+		  memcpy(CH0_num+414*sizeof(uint8_t),CH1_num,sizeof(CH1_num));
+		  HAL_UART_Transmit_DMA(&huart2, (uint8_t*)&CH0_num[0] , 828);
+	  }
+	  else{}
+
+  }
+
+
 
 
 
@@ -312,34 +374,6 @@ void TIM3_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM4 global interrupt.
-  */
-void TIM4_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM4_IRQn 0 */
-
-  /* USER CODE END TIM4_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim4);
-  /* USER CODE BEGIN TIM4_IRQn 1 */
-
-  /* USER CODE END TIM4_IRQn 1 */
-}
-
-/**
-  * @brief This function handles USART1 global interrupt.
-  */
-void USART1_IRQHandler(void)
-{
-  /* USER CODE BEGIN USART1_IRQn 0 */
-
-  /* USER CODE END USART1_IRQn 0 */
-  HAL_UART_IRQHandler(&huart1);
-  /* USER CODE BEGIN USART1_IRQn 1 */
-
-  /* USER CODE END USART1_IRQn 1 */
-}
-
-/**
   * @brief This function handles USART2 global interrupt.
   */
 void USART2_IRQHandler(void)
@@ -351,34 +385,6 @@ void USART2_IRQHandler(void)
   /* USER CODE BEGIN USART2_IRQn 1 */
 
   /* USER CODE END USART2_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM5 global interrupt.
-  */
-void TIM5_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM5_IRQn 0 */
-
-  /* USER CODE END TIM5_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim5);
-  /* USER CODE BEGIN TIM5_IRQn 1 */
-
-  /* USER CODE END TIM5_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA2 stream7 global interrupt.
-  */
-void DMA2_Stream7_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream7_IRQn 0 */
-
-  /* USER CODE END DMA2_Stream7_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_tx);
-  /* USER CODE BEGIN DMA2_Stream7_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream7_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

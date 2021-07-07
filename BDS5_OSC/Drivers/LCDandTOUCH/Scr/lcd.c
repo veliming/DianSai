@@ -3399,7 +3399,7 @@ void LCD_Init(void)
 
 		LCD_SSD_BackLightSet(100);//背光设置为最亮
 	}
-	LCD_Display_Dir(0);		//默认为竖屏
+	LCD_Display_Dir(1);		//默认为横屏
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);				//点亮背光
 	LCD_Clear(WHITE);
 }

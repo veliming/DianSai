@@ -18,4 +18,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS3_SOU/activeLaunchMod
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS3_SOU/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS3_SOUP/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS4_adda/activeLaunchMode=run
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS5_OSC/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Debug\ BDS5_OSC/activeLaunchMode=debug

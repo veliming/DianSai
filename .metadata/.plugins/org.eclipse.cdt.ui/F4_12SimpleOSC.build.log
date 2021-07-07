@@ -1,10 +1,24 @@
-22:56:01 **** Incremental Build of configuration Debug for project F4_12SimpleOSC ****
+11:28:10 **** Incremental Build of configuration Debug for project F4_12SimpleOSC ****
 make -j8 all 
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/cmd_process.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/cmd_process.d" -MT"Drivers/TFT_Driver/Src/cmd_process.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/cmd_process.o"
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/cmd_queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/cmd_queue.d" -MT"Drivers/TFT_Driver/Src/cmd_queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/cmd_queue.o"
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/hmi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/hmi_driver.d" -MT"Drivers/TFT_Driver/Src/hmi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/hmi_driver.o"
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/hmi_user_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/hmi_user_uart.d" -MT"Drivers/TFT_Driver/Src/hmi_user_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/hmi_user_uart.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/ADS8688/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/F4_LCD_Driver/Inc -I../Drivers/F4_W24Q128_Driver/Inc -I../Drivers/F4_TOUCH_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "F4_12SimpleOSC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\APP\Tencent\QQ\TALKLOG\2464190361\FileRecv\F4_12SimpleOSC\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F4_12SimpleOSC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? F4_12SimpleOSC.elf
+ 
+arm-none-eabi-objdump -h -S  F4_12SimpleOSC.elf  > "F4_12SimpleOSC.list"
+arm-none-eabi-objcopy  -O binary  F4_12SimpleOSC.elf  "F4_12SimpleOSC.bin"
 arm-none-eabi-size   F4_12SimpleOSC.elf 
    text	   data	    bss	    dec	    hex	filename
   60920	    208	  83024	 144152	  23318	F4_12SimpleOSC.elf
-???бъ???????? default.size.stdout
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? F4_12SimpleOSC.bin
+ 
+гд???????????гд????? F4_12SimpleOSC.list
  
 
-22:56:02 Build Finished. 0 errors, 0 warnings. (took 743ms)
+11:28:12 Build Finished. 0 errors, 0 warnings. (took 1s.942ms)
 

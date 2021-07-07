@@ -174,7 +174,6 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc2, (uint32_t*)&Voltage_Behind_DMA[0], ADCTIMES);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&Current_DMA[0], ADCTIMES);
 
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

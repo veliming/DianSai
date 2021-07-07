@@ -47,7 +47,7 @@ Tx_STACK Tx_stack = {0};  //发送队列
 
 void TFT_Init(void)
 {
-    HAL_UART_Receive_IT(&huart1, &RxBuffer, 1);//使能接收中断
+    //HAL_UART_Receive_IT(&huart1, &RxBuffer, 1);//使能接收中断
     queue_reset();
 }
 void Param_Update(void) //获取当前新参数
@@ -179,11 +179,12 @@ u16 Tx_stack_find_cmd(u8 **buffer)
 
 void  SendChar(uchar t)
 {
-	Tx_stack_push(t);
-	/*
-	USART1->DR = (t & (uint16_t)0x01FF);
-    while(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TXE) == RESET);
-    while(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TC) == RESET);
-    */
+	//Tx_stack_push(t);
+	//HAL_UART_Transmit_DMA(&huart2, t, 1);
+	USART2->DR = t;
+	//USART2->DR = (t & (uint16_t)0x01FF);
+    //while(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TXE) == RESET);
+    //while(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TC) == RESET);
+
 }
 

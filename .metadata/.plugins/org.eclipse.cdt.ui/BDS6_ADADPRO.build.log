@@ -1,0 +1,155 @@
+15:31:57 **** Incremental Build of configuration Debug for project BDS6_ADADPRO ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/hmi_user_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/hmi_user_uart.d" -MT"Drivers/TFT_Driver/Src/hmi_user_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/hmi_user_uart.o"
+arm-none-eabi-gcc "../Drivers/LCDandTOUCH/Scr/lcd.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/LCDandTOUCH/Scr/lcd.d" -MT"Drivers/LCDandTOUCH/Scr/lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/LCDandTOUCH/Scr/lcd.o"
+arm-none-eabi-gcc "../Drivers/ADS8688/Scr/ADS8688.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/ADS8688/Scr/ADS8688.d" -MT"Drivers/ADS8688/Scr/ADS8688.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/ADS8688/Scr/ADS8688.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/Quar-Tzer-top/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.1/Drivers/CMSIS/Include -I../Drivers/LCDandTOUCH/Inc -I../Drivers/TFT_Driver/Inc -I../Drivers/ADS8688/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+../Drivers/TFT_Driver/Src/hmi_user_uart.c:29:10: fatal error: usart.h: No such file or directory
+   29 | #include "usart.h"
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [Drivers/TFT_Driver/Src/subdir.mk:34: Drivers/TFT_Driver/Src/hmi_user_uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Drivers/ADS8688/Scr/ADS8688.c:1:
+../Drivers/ADS8688/Inc/ADS8688.h:74:2: error: unknown type name 'SPI_HandleTypeDef'
+   74 |  SPI_HandleTypeDef *spiHandle;
+      |  ^~~~~~~~~~~~~~~~~
+../Drivers/LCDandTOUCH/Scr/lcd.c:273:2: warning: missing braces around initializer [-Wmissing-braces]
+  273 |  {
+      |  ^
+......
+  277 |   0,
+      |   {
+......
+  281 |   0,
+      |    }
+  282 |   0,
+      |   {
+......
+  285 | };
+      | }
+../Drivers/LCDandTOUCH/Scr/lcd.c:534:31: warning: pointer targets in initialization of 'u8 * const' {aka 'unsigned char * const'} from 'char *' differ in signedness [-Wpointer-sign]
+  534 | u8 *const TP_REMIND_MSG_TBL = "Please use the stylus click the cross on the screen.The cross will always move until the screen adjustment is completed.";
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/LCDandTOUCH/Scr/lcd.c: In function 'TP_Adj_Info_Show':
+../Drivers/LCDandTOUCH/Scr/lcd.c:540:59: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  540 |  LCD_ShowString(40, 160, lcddev.width, lcddev.height, 16, "x1:");
+      |                                                           ^~~~~
+      |                                                           |
+      |                                                           char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:541:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  541 |  LCD_ShowString(40 + 80, 160, lcddev.width, lcddev.height, 16, "y1:");
+      |                                                                ^~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:542:59: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  542 |  LCD_ShowString(40, 180, lcddev.width, lcddev.height, 16, "x2:");
+      |                                                           ^~~~~
+      |                                                           |
+      |                                                           char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:543:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  543 |  LCD_ShowString(40 + 80, 180, lcddev.width, lcddev.height, 16, "y2:");
+      |                                                                ^~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:544:59: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  544 |  LCD_ShowString(40, 200, lcddev.width, lcddev.height, 16, "x3:");
+      |                                                           ^~~~~
+      |                                                           |
+      |                                                           char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:545:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  545 |  LCD_ShowString(40 + 80, 200, lcddev.width, lcddev.height, 16, "y3:");
+      |                                                                ^~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:546:59: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  546 |  LCD_ShowString(40, 220, lcddev.width, lcddev.height, 16, "x4:");
+      |                                                           ^~~~~
+      |                                                           |
+      |                                                           char *
+../Drivers/ADS8688/Inc/ADS8688.h:86:36: error: unknown type name 'SPI_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+   86 | uint8_t ADS8688_Init(ADS8688 *ads, SPI_HandleTypeDef *spiHandle, GPIO_TypeDef *csPinBank, uint16_t csPin);
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    DMA_HandleTypeDef
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:547:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  547 |  LCD_ShowString(40 + 80, 220, lcddev.width, lcddev.height, 16, "y4:");
+      |                                                                ^~~~~
+      |                                                                |
+      |                                                                char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:548:59: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  548 |  LCD_ShowString(40, 240, lcddev.width, lcddev.height, 16, "fac is:");
+      |                                                           ^~~~~~~~~
+      |                                                           |
+      |                                                           char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c: In function 'TP_Adjust':
+../Drivers/LCDandTOUCH/Scr/lcd.c:681:62: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  681 |      LCD_ShowString(40, 26, lcddev.width, lcddev.height, 16, "TP Need readjust!");
+      |                                                              ^~~~~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/LCDandTOUCH/Scr/lcd.c:697:62: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  697 |     LCD_ShowString(35, 110, lcddev.width, lcddev.height, 16, "Touch Screen Adjust OK!"); //校正完成
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              char *
+In file included from ../Drivers/LCDandTOUCH/Scr/lcd.c:9:
+../Drivers/LCDandTOUCH/Inc/lcd.h:212:96: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  212 | void LCD_ShowString(uint16_t x,uint16_t y,uint16_t width,uint16_t height,uint8_t size,uint8_t *p);  //显示�?个字符串,12/16字体
+      |                                                                                       ~~~~~~~~~^
+../Drivers/ADS8688/Scr/ADS8688.c:6:36: error: unknown type name 'SPI_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+    6 | uint8_t ADS8688_Init(ADS8688 *ads, SPI_HandleTypeDef *spiHandle, GPIO_TypeDef *csPinBank, uint16_t csPin) {
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    DMA_HandleTypeDef
+../Drivers/ADS8688/Scr/ADS8688.c: In function 'ADS_Prog_Read':
+../Drivers/ADS8688/Scr/ADS8688.c:56:8: warning: implicit declaration of function 'HAL_SPI_TransmitReceive' [-Wimplicit-function-declaration]
+   56 |  ret = HAL_SPI_TransmitReceive(ads->spiHandle, txbuf, rxbuf, 2, 10);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Drivers/ADS8688/Scr/subdir.mk:19: Drivers/ADS8688/Scr/ADS8688.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+15:31:58 Build Failed. 7 errors, 14 warnings. (took 1s.313ms)
+

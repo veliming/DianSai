@@ -36,7 +36,7 @@ Drivers/TFT_Driver/Src/cmd_process.o: \
  ../Drivers/TFT_Driver/Inc/hmi_user_uart.h \
  ../Drivers/TFT_Driver/Inc/cmd_queue.h \
  ../Drivers/TFT_Driver/Inc/hmi_driver.h \
- ../Drivers/TFT_Driver/Inc/cmd_process.h
+ ../Drivers/TFT_Driver/Inc/cmd_process.h ../Core/Inc/main.h
 
 ../Drivers/TFT_Driver/Inc/hmi_driver.h:
 
@@ -115,3 +115,5 @@ Drivers/TFT_Driver/Src/cmd_process.o: \
 ../Drivers/TFT_Driver/Inc/hmi_driver.h:
 
 ../Drivers/TFT_Driver/Inc/cmd_process.h:
+
+../Core/Inc/main.h:

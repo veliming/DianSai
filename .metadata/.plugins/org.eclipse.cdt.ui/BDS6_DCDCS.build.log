@@ -1,0 +1,10 @@
+10:22:16 **** Incremental Build of configuration Debug for project BDS6_DCDCS ****
+make -j8 all 
+arm-none-eabi-size   BDS6_DCDCS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5076	     20	   1620	   6716	   1a3c	BDS6_DCDCS.elf
+гд???????????гд????? default.size.stdout
+ 
+
+10:22:19 Build Finished. 0 errors, 0 warnings. (took 2s.596ms)
+

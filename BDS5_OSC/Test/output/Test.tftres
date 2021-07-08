@@ -1,0 +1,12 @@
+<Resource>
+    <pages>
+        <page name="Screen0" id="0" />
+    </pages>
+    <images>
+        <image id="0" url="d:\work-ele\a-keil\bds5_osc\test\images\背景.png" effect_width="480" effect_height="272" />
+        <image id="1" url="C:\Users\QUAR-T~1\AppData\Local\Temp\cursor_1_0.png" effect_width="24" effect_height="24" />
+        <image id="2" url="d:\work-ele\a-keil\bds5_osc\test\Images\color_button_yellow_up.gif" effect_width="50" effect_height="14" />
+        <image id="3" url="d:\work-ele\a-keil\bds5_osc\test\Images\color_button_yellow_down.gif" effect_width="50" effect_height="14" />
+    </images>
+    <waves />
+</Resource>

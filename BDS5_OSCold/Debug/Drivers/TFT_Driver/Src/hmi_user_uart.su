@@ -1,0 +1,6 @@
+hmi_user_uart.c:48:6:TFT_Init	8	static
+hmi_user_uart.c:53:6:Param_Update	16	static
+hmi_user_uart.c:103:6:Tx_stack_reset	16	static
+hmi_user_uart.c:110:6:Tx_stack_push	32	static
+hmi_user_uart.c:163:5:Tx_stack_find_cmd	16	static
+hmi_user_uart.c:180:7:SendChar	16	static

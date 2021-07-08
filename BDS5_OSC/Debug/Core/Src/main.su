@@ -1,3 +1,6 @@
-main.c:95:5:main	16	static
-main.c:155:6:SystemClock_Config	88	static
-main.c:205:6:Error_Handler	4	static
+main.c:159:5:main	16	static
+main.c:223:6:SystemClock_Config	88	static
+main.c:266:6:FinishCount	16	static
+main.c:336:6:Dosomething	8	static
+main.c:442:6:HAL_UART_RxCpltCallback	24	static
+main.c:472:6:Error_Handler	4	static

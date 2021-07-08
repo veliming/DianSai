@@ -1,0 +1,2 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`1234567890-=[];',./~!@#$%^&*()_+{}:"<>? 年月日时分秒星期一二三四五六日
+垂直水平触发当前波形：无相位差°上升沿下降

@@ -2,7 +2,7 @@
 #include "hmi_user_uart.h"
 #include "cmd_queue.h"
 #include "cmd_process.h"
-
+#include "main.h"
 #include "stdio.h"
 #include "string.h"
 #include "stdarg.h"
@@ -10,13 +10,17 @@
 #include "obase.h"
 
 extern float goodAmp[2];
+
+extern uint8_t CH0_ON;
+extern uint8_t CH1_ON;
+
 /*! 
  *  \brief  消息处理流程
  *  \param msg 待处理消息
  *  \param size 消息长度
  */
 
-uint8 cmd_buffer[CMD_MAX_SIZE]; //指令缓存
+extern uint8_t cmd_buffer[CMD_MAX_SIZE]; //指令缓存
 
 void ProcessMessage(PCTRL_MSG msg, uint16 size)
 {
@@ -151,6 +155,12 @@ void NotifyTouchXY(uint8 press, uint16 x, uint16 y, void *userdata)
  */
 void NotifyButton(uint16 screen_id, uint16 control_id, uint8 state, void *userdata)
 {
+	switch (control_id)
+	{
+	case 35:CH0_ON=~CH0_ON;
+	case 34:CH1_ON=~CH1_ON;
+
+	}
 }
 
 /*! 

@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="LastUsedSourceTemplate" value="默认的 C 源文件模板"/>
 	<item key="LastUsedHeaderTemplate" value="默认的 C 头文件模板"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="&quot;${workspace_loc:/${ProjName}/Drivers/DSP/libarm_cortexM4lf_math.a}&quot;"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="${workspace_loc:/${ProjName}/Drivers/CMSIS/Lib/GCC}"/>
 	<section name="completion_proposal_size">
 		<item key="size.x" value="1021"/>
 		<item key="size.y" value="318"/>
@@ -16,10 +16,27 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="receiveStatus"/>
 			<item value="__CC_ARM"/>
 		</list>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex.detail" value="0"/>
+		<item key="askReindex" value="true"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="50"/>
+		<item key="DIALOG_Y_ORIGIN" value="207"/>
+		<item key="DIALOG_WIDTH" value="1584"/>
+		<item key="DIALOG_HEIGHT" value="574"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.text.QuickOutline">
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_WIDTH" value="350"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_HEIGHT" value="300"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_X_ORIGIN" value="916"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_Y_ORIGIN" value="430"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="true"/>
 	</section>
 </section>

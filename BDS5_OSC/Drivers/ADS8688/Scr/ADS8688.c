@@ -83,7 +83,6 @@ HAL_StatusTypeDef ADS_Cmd_Write(ADS8688 *ads, uint8_t cmd, uint8_t *data) {
 
 	HAL_GPIO_WritePin(ads->csPinBank, ads->csPin, GPIO_PIN_RESET);
 	ret = HAL_SPI_TransmitReceive(ads->spiHandle, txbuf, rxbuf, 2, 10);
-	//ret = HAL_SPI_TransmitReceive_DMA(ads->spiHandle, txbuf, rxbuf, 2);
 	HAL_GPIO_WritePin(ads->csPinBank, ads->csPin, GPIO_PIN_SET);
 
 	data[0] = rxbuf[2];
@@ -96,7 +95,7 @@ HAL_StatusTypeDef ADS_Read_All_Raw(ADS8688 *ads, uint16_t *data) {
 	uint8_t ads_raw[2];
 	for(int i=0; i<CHNS_NUM_READ; i++) {
 	  ret = ADS_Cmd_Write(ads, NO_OP, ads_raw);
-	  data[i] = (int)((uint16_t)(ads_raw[1]<<8 | ads_raw[0]));
+	  data[i] = (ads_raw[1]<<8|ads_raw[0]);
 	}
 	return ret;
 }

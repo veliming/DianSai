@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//Core/Src/main.c=UTF-8
+encoding//Drivers/ADS8688/Inc/ADS8688.h=UTF-8
 encoding//Drivers/TFT_Driver=GBK
+separateDerivedEncodings=true

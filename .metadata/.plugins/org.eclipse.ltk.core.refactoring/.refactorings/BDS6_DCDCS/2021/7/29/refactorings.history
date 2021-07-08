@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“BDS6_DCDCS/Drivers/obase”重命名为“Obase”" description="重命名资源“obase”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/obase" name="Obase" stamp="1626079957483" updateReferences="true"/>
+</session>

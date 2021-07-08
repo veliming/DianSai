@@ -6,38 +6,45 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ads_data"/>
+		<item key="selection" value="q31_t"/>
 		<list key="findhistory">
-			<item value="rxdata"/>
-			<item value="ads_data"/>
-			<item value="rxbuf"/>
-			<item value="txbuf"/>
-			<item value="uint8_t txbuf[2]"/>
-			<item value="uint8_t "/>
-			<item value="interval"/>
-			<item value="default_interval"/>
-			<item value="USB_DEBUG"/>
-			<item value="__CC_ARM"/>
-			<item value="ADS_Read_All_Raw"/>
-			<item value="FPU_pre"/>
-			<item value="FPU"/>
-			<item value="pwm"/>
-			<item value="ToV"/>
+			<item value="q31_t"/>
+			<item value="u8"/>
+			<item value="ch0max"/>
+			<item value="savedata0_8[0]-savedata1_8[0]"/>
+			<item value="max"/>
+			<item value="n"/>
+			<item value="chcha"/>
+			<item value="HAL_DMA_Start_IT"/>
+			<item value="pData"/>
+			<item value="hdma_tim2_ch1"/>
+			<item value="TIM_CHANNEL_1"/>
+			<item value="TIM_CHANNEL_2"/>
+			<item value="tim2"/>
+			<item value="ch0_vpp_tft"/>
+			<item value="[7]"/>
 		</list>
 		<list key="replacehistory">
-			<item value="ads_data"/>
-			<item value="txbuf[2]"/>
-			<item value="var"/>
-			<item value=""/>
-			<item value="HAL_Delay(1);"/>
-			<item value="uint32_t"/>
 			<item value="uint8_t"/>
-			<item value="uint16_t"/>
+			<item value=""/>
+			<item value="tft"/>
+			<item value="16"/>
+			<item value="30"/>
+			<item value="1200"/>
+			<item value="2000"/>
+			<item value="D_num"/>
+			<item value="D_alldata"/>
+			<item value="D_onedata"/>
+			<item value="D_place"/>
+			<item value="800"/>
+			<item value="savedata1"/>
+			<item value="&gt;"/>
+			<item value="&lt;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1153"/>
-		<item key="DIALOG_Y_ORIGIN" value="287"/>
+		<item key="DIALOG_X_ORIGIN" value="1269"/>
+		<item key="DIALOG_Y_ORIGIN" value="108"/>
 		<item key="DIALOG_WIDTH" value="326"/>
 		<item key="DIALOG_HEIGHT" value="453"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>

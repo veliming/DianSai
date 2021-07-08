@@ -1,0 +1,10 @@
+20:13:48 **** Incremental Build of configuration Debug for project BDS5_OSCold ****
+make -j8 all 
+arm-none-eabi-size   BDS5_OSCold.elf 
+   text	   data	    bss	    dec	    hex	filename
+  47804	   1564	   4700	  54068	   d334	BDS5_OSCold.elf
+гд???????????гд????? default.size.stdout
+ 
+
+20:13:48 Build Finished. 0 errors, 0 warnings. (took 549ms)
+

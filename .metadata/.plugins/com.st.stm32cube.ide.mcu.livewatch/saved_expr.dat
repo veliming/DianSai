@@ -1,5 +1,9 @@
-savedata1
-CH0_num
-((savedata0[var]/8)-2.56)/5.12*4.00+2.56
-ch1max
-ch0max
+VoltageReal
+CurrentReal
+Voltage_12
+Current_12
+VoltageSet
+CurrentSet
+Mode
+PWM
+SubMode

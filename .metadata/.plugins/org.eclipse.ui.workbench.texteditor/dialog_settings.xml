@@ -6,25 +6,19 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="q31_t"/>
+		<item key="selection" value="VoltageReal"/>
 		<list key="findhistory">
+			<item value="VoltageReal"/>
+			<item value="PWM"/>
+			<item value="limit"/>
+			<item value="kp"/>
+			<item value="PEin(0)"/>
+			<item value="&#x09;{"/>
 			<item value="q31_t"/>
 			<item value="u8"/>
-			<item value="ch0max"/>
-			<item value="savedata0_8[0]-savedata1_8[0]"/>
-			<item value="max"/>
-			<item value="n"/>
-			<item value="chcha"/>
-			<item value="HAL_DMA_Start_IT"/>
-			<item value="pData"/>
-			<item value="hdma_tim2_ch1"/>
-			<item value="TIM_CHANNEL_1"/>
-			<item value="TIM_CHANNEL_2"/>
-			<item value="tim2"/>
-			<item value="ch0_vpp_tft"/>
-			<item value="[7]"/>
 		</list>
 		<list key="replacehistory">
+			<item value="PBin(5)"/>
 			<item value="uint8_t"/>
 			<item value=""/>
 			<item value="tft"/>
@@ -32,14 +26,6 @@
 			<item value="30"/>
 			<item value="1200"/>
 			<item value="2000"/>
-			<item value="D_num"/>
-			<item value="D_alldata"/>
-			<item value="D_onedata"/>
-			<item value="D_place"/>
-			<item value="800"/>
-			<item value="savedata1"/>
-			<item value="&gt;"/>
-			<item value="&lt;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

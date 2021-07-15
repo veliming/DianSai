@@ -106,6 +106,8 @@
                                     <listOptionValue builtIn="false" value="../Drivers/TFT_Driver/Inc"/>
                                     									
                                     <listOptionValue builtIn="false" value="../Drivers/LCDandTOUCH/Inc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="../Drivers/Obase/Inc"/>
                                     								
                                 </option>
                                 								

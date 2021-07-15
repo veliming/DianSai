@@ -1,7 +1,14 @@
-10:22:16 **** Incremental Build of configuration Debug for project BDS6_DCDCS ****
+10:32:38 **** Incremental Build of configuration Debug for project BDS7_AC ****
 make -j8 all 
-arm-none-eabi-size   BDS6_DCDCS.elf 
+arm-none-eabi-size   BDS7_AC.elf 
    text	   data	    bss	    dec	    hex	filename
-   5076	     20	   1620	   6716	   1a3c	BDS6_DCDCS.elf
+  44460	    512	   2792	  47764	   ba94	BDS7_AC.elf
+гд???????????гд????? default.size.stdout
+ 
+10:32:40 **** Incremental Build of configuration Debug for project BDS7_AC ****
+make -j8 all 
+arm-none-eabi-size   BDS7_AC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44460	    512	   2792	  47764	   ba94	BDS7_AC.elf
 гд???????????гд????? default.size.stdout
  

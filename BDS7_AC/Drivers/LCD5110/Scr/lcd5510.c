@@ -1,5 +1,7 @@
 #include "lcd5510.h"
 #include "obase.h"
+
+
 const unsigned char  font6x8[][6] =
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },// sp
@@ -378,7 +380,7 @@ void LCD_init(void)
 	HAL_Delay(500);
 	res1;
 	HAL_Delay(100);
-	LCD_write_byte(0x25,0);//LCD功能设置：芯片活动，水平寻址，使用扩展指令
+	LCD_write_byte(0x27,0);//LCD功能设置：芯片活动，水平寻址，使用扩展指令
 	LCD_write_byte(0xA1,0);//设置VOP值，室温下的编程范围为3.00-10.68
 	//Vlcd=3.06+(VOP)*0.06,本例VOP为0B0101 0000为十进制的80，Vlcd=7.86V
 	LCD_write_byte(0x14,0);//混合偏执率

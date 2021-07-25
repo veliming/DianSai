@@ -1,20 +1,15 @@
-20:50:18 **** Incremental Build of configuration Debug for project BDS6_DCDCS ****
+20:42:34 **** Build of configuration Debug for project BDS6_DCDCS ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "BDS6_DCDCS.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS6_DCDCS\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS6_DCDCS.map" -Wl,--gc-sections -static -Wl,--start-group -larm_cortexM4lf_math -Wl,--end-group -L"D:\Work-Ele\A-KEIL\BDS6_DCDCS\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
-гд???????????гд??????????? BDS6_DCDCS.elf
- 
-arm-none-eabi-objdump -h -S  BDS6_DCDCS.elf  > "BDS6_DCDCS.list"
-arm-none-eabi-objcopy  -O binary  BDS6_DCDCS.elf  "BDS6_DCDCS.bin"
-arm-none-eabi-size   BDS6_DCDCS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  44460	    512	   2792	  47764	   ba94	BDS6_DCDCS.elf
-гд???????????гд????? default.size.stdout
- 
-гд???????????гд????? BDS6_DCDCS.bin
- 
-гд???????????гд????? BDS6_DCDCS.list
- 
+arm-none-eabi-gcc "../Drivers/output/Scr/outputdata.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/output/Scr/outputdata.d" -MT"Drivers/output/Scr/outputdata.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/output/Scr/outputdata.o"
+../Drivers/output/Scr/outputdata.c:1:10: fatal error: outputdata.h: No such file or directory
+    1 | #include "outputdata.h"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+make: *** [Drivers/output/Scr/subdir.mk:19: Drivers/output/Scr/outputdata.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-20:50:20 Build Finished. 0 errors, 0 warnings. (took 1s.368ms)
+20:42:36 Build Failed. 3 errors, 0 warnings. (took 1s.461ms)
 

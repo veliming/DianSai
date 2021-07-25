@@ -26,6 +26,8 @@
 #include "obase.h"
 #include "lcd5510.h"
 #include "arm_math.h"
+#include "math.h"
+#include "outputdata.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,7 +37,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ADCTIMES 	50		//ADC采样次数
+#define ADCTIMES 	1536		//ADC采样次数
+#define FFT_LENGTH  1024 		//FFT长度
+
+#define NUM 1536 //�?????轮采样点�?????
+#define BLOCK_SIZE 128 //计算�?????次FIR
+#define FIR_order 26 //滤波器阶�?????
+#define FIR_Len 26+1 //滤波器系数个�?????
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,32 +53,55 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern arm_pid_instance_f32 VPID;
+
+extern arm_rfft_fast_instance_f32 FFT;
+extern arm_fir_instance_f32 FIR;
+
 extern arm_pid_instance_f32 CPID;
 
-extern uint16_t Voltage_12[ADCTIMES];
-extern uint16_t Current_12[ADCTIMES];
+extern float32_t Voltage_12[ADCTIMES];
+extern float32_t Current_12[ADCTIMES];
 
-extern uint16_t Voltage_12_st[ADCTIMES];
-extern uint16_t Current_12_st[ADCTIMES];
+float32_t Voltage_12_RMS[ADCTIMES];
+float32_t Current_12_RMS[ADCTIMES];
 
-extern double VoltageSet;
+extern float32_t Voltage_12_FIR_out[ADCTIMES];
+extern float32_t Current_12_FIR_out[ADCTIMES];
+
+extern float32_t Voltage_12_FFT_in[FFT_LENGTH];
+extern float32_t Current_12_FFT_in[FFT_LENGTH];
+
+extern float32_t Voltage_12_FFT_out[FFT_LENGTH];
+extern float32_t Current_12_FFT_out[FFT_LENGTH];
+
+float32_t   Current_Arg;
+float32_t   Voltage_Arg;
+
+extern float32_t   PHD[11];
+extern uint8_t PHDtimes;
+
 extern double CurrentSet;
 
-extern double VoltageReal;
-extern double CurrentReal;
+extern float32_t VoltageReal;
+extern float32_t CurrentReal;
+extern uint32_t Freq;
 
 extern int16_t PWM;
 
-extern uint8_t Mode;
-extern uint8_t SubMode;
-
 uint32_t tick;
 
-double Vpid_error;
 double Cpid_error;
 
-uint16_t buf;
+int times=0;
+
+int flagnum=0;
+
+extern float OutData[4];
+
+extern uint8_t Mode;
+extern uint8_t frame;
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,11 +115,14 @@ uint16_t buf;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern DMA_HandleTypeDef hdma_adc1;
-extern DMA_HandleTypeDef hdma_adc2;
+extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef hadc2;
+extern DMA_HandleTypeDef hdma_tim5_ch1;
+extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim5;
+extern DMA_HandleTypeDef hdma_usart2_rx;
+extern DMA_HandleTypeDef hdma_usart2_tx;
+extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -256,12 +290,12 @@ void EXTI0_IRQHandler(void)
 						case 6:
 						{
 							while(PEin(0)==0){}
-							if((VoltageSet-5.0)<0.0)
+							if((CurrentSet-0.1)<0.0)
 							{
-								VoltageSet=0.0;
+								CurrentSet=0.0;
 							}
 							else{
-								VoltageSet-=5.0;
+								CurrentSet-=0.1;
 							}
 							goto END;
 
@@ -269,13 +303,13 @@ void EXTI0_IRQHandler(void)
 						case 7:
 						{
 							while(PEin(0)==0){}
-							if((VoltageSet-1.0)<0.0)
+							if((CurrentSet-0.02)<0.0)
 							{
-								VoltageSet=0.0;
+								CurrentSet=0.0;
 							}
 							else
 							{
-								VoltageSet-=1.0;
+								CurrentSet-=0.02;
 							}
 							goto END;
 
@@ -284,26 +318,26 @@ void EXTI0_IRQHandler(void)
 						case 8:
 						{
 							while(PEin(0)==0){}
-							if((VoltageSet+1.0)>30.0)
+							if((CurrentSet+0.02)>30.0)
 							{
-								VoltageSet=30.0;
+								CurrentSet=30.0;
 							}
 							else
 							{
-								VoltageSet+=1.0;
+								CurrentSet+=0.02;
 							}
 							goto END;
 						}
 						case 9:
 						{
 							while(PEin(0)==0){}
-							if((VoltageSet+5.0)>30.0)
+							if((CurrentSet+0.1)>30.0)
 							{
-								VoltageSet=30.0;
+								CurrentSet=30.0;
 							}
 							else
 							{
-								VoltageSet+=5.0;
+								CurrentSet+=0.1;
 							}
 							goto END;
 						}
@@ -332,6 +366,7 @@ void EXTI1_IRQHandler(void)
 	if( (HAL_GetTick()-tick)>30)
 	{
 
+		if(Mode==1){
 
 	for(uint8_t i=6;i<10;i++)
 	{
@@ -345,26 +380,30 @@ void EXTI1_IRQHandler(void)
 				{
 
 					while(PEin(1)==0){}
-					if((CurrentSet-0.5)<0)
+					if((PWM-160)<0)
 					{
-						CurrentSet=0;
+						PWM=0;
+						TIM3->CCR1 = PWM;
 					}
 					else
 					{
-						CurrentSet-=0.2;
+						PWM-=160;
+						TIM3->CCR1 = PWM;
 					}
 					goto END;
 				}
 				case 7:
 				{
 					while(PEin(1)==0){}
-					if((CurrentSet-0.1)<0)
+					if((PWM-32)<0)
 					{
-						CurrentSet=0;
+						PWM=0;
+						TIM3->CCR1 = PWM;
 					}
 					else
 					{
-						CurrentSet-=0.05;
+						PWM-=32;
+						TIM3->CCR1 = PWM;
 					}
 					goto END;
 
@@ -373,13 +412,15 @@ void EXTI1_IRQHandler(void)
 				case 8:
 				{
 					while(PEin(1)==0){}
-					if((CurrentSet+0.1)>2)
+					if((PWM+32)>3200)
 					{
-						CurrentSet=2;
+						PWM=2;
+						TIM3->CCR1 = PWM;
 					}
 					else
 					{
-						CurrentSet+=0.05;
+						PWM+=32;
+						TIM3->CCR1 = PWM;
 					}
 					goto END;
 
@@ -388,13 +429,15 @@ void EXTI1_IRQHandler(void)
 				case 9:
 				{
 					while(PEin(1)==0){}
-					if((CurrentSet+0.5)>2.1)
+					if((PWM+160)>3200)
 					{
-						CurrentSet=2;
+						PWM=3200;
+						TIM3->CCR1 = PWM;
 					}
 					else
 					{
-						CurrentSet+=0.2;
+						PWM+=160;
+						TIM3->CCR1 = PWM;
 					}
 					goto END;
 				}
@@ -405,6 +448,7 @@ void EXTI1_IRQHandler(void)
 	}
 	HAL_GPIO_WritePin(GPIOB,COL1_Pin|COL2_Pin|COL3_Pin|COL4_Pin, GPIO_PIN_RESET);
 	tick = HAL_GetTick();
+		}
 	}
   /* USER CODE END EXTI1_IRQn 1 */
 }
@@ -422,7 +466,6 @@ void EXTI4_IRQHandler(void)
   //PB4 ROW3
 	if( (HAL_GetTick()-tick)>30)
 	{
-		if(Mode==3){
 
 	for(uint8_t i=6;i<10;i++)
 	{
@@ -435,58 +478,30 @@ void EXTI4_IRQHandler(void)
 				case 6:
 				{
 					while(PBin(4)==0){}
-					if((PWM-105)<0)
-					{
-						PWM=0;
-					}
-					else
-					{
-						PWM-=105;
-						TIM3->CCR1 = PWM;
-					}
+					Mode=0;
+					PWM=0;
+					TIM3->CCR1 = PWM;
 					goto END;
 
 				}
 				case 7:
 				{
 					while(PBin(4)==0){}
-					if((PWM-21)<0)
-					{
-						PWM=0;
-					}
-					else
-					{
-						PWM-=21;
-						TIM3->CCR1 = PWM;
-					}
+					Mode=1;
+					PWM=0;
+					TIM3->CCR1 = PWM;
 					goto END;
 				}
 				case 8:
 				{
 					while(PBin(4)==0){}
-					if((PWM+21)>1890)
-					{
-						PWM=1890;
-					}
-					else
-					{
-						PWM+=21;
-						TIM3->CCR1 = PWM;
-					}
+					frame=0;
 					goto END;
 				}
 				case 9:
 				{
 					while(PBin(4)==0){}
-					if((PWM+105)>1890)
-					{
-						PWM=1890;
-					}
-					else
-					{
-						PWM+=105;
-						TIM3->CCR1 = PWM;
-					}
+					frame=1;
 					goto END;
 				}
 			}
@@ -496,9 +511,66 @@ void EXTI4_IRQHandler(void)
 	}
 	HAL_GPIO_WritePin(GPIOB,COL1_Pin|COL2_Pin|COL3_Pin|COL4_Pin, GPIO_PIN_RESET);
 	tick = HAL_GetTick();
-	}
+
 	}
   /* USER CODE END EXTI4_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 stream2 global interrupt.
+  */
+void DMA1_Stream2_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream2_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream2_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_tim5_ch1);
+  /* USER CODE BEGIN DMA1_Stream2_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream2_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 stream5 global interrupt.
+  */
+void DMA1_Stream5_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream5_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream5_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_usart2_rx);
+  /* USER CODE BEGIN DMA1_Stream5_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 stream6 global interrupt.
+  */
+void DMA1_Stream6_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream6_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream6_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_usart2_tx);
+  /* USER CODE BEGIN DMA1_Stream6_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream6_IRQn 1 */
+}
+
+/**
+  * @brief This function handles ADC1, ADC2 and ADC3 global interrupts.
+  */
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  HAL_ADC_IRQHandler(&hadc2);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+
+  /* USER CODE END ADC_IRQn 1 */
 }
 
 /**
@@ -528,29 +600,29 @@ void EXTI9_5_IRQHandler(void)
 				{
 
 					while(PBin(5)==0){}
-					Mode=0;
-					PWM=0;
+
+
 					goto END;
 				}
 				case 7:
 				{
 					while(PBin(5)==0)
-					Mode=1;
-					PWM=0;
+
+
 					goto END;
 				}
 				case 8:
 				{
 					while(PBin(5)==0)
-					Mode=2;
-					PWM=0;
+
+
 					goto END;
 				}
 				case 9:
 				{
 					while(PBin(5)==0)
-					Mode=3;
-					PWM=0;
+
+
 					goto END;
 				}
 			}
@@ -562,6 +634,143 @@ void EXTI9_5_IRQHandler(void)
 	tick = HAL_GetTick();
 	}
   /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM2 global interrupt.
+  */
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+
+  HAL_ADC_Start(&hadc1);
+  HAL_ADC_PollForConversion(&hadc1, 5);
+  HAL_ADC_Start(&hadc2);
+  HAL_ADC_PollForConversion(&hadc2, 5);
+
+  Current_12[times] = HAL_ADC_GetValue(&hadc1);
+  Voltage_12[times] = HAL_ADC_GetValue(&hadc2);
+  times++;
+  if(times==1536)
+  {
+	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+	  times=0;
+
+//	  for (int var = 0; var < 1024; ++var)
+//	  {
+//		  OutData[0]=Current_12[var];
+//		  OutData[1]=Voltage_12[var];
+//		  OutPut_Data();
+//	  }
+
+	  arm_offset_f32(Current_12, -2048.0,Current_12_RMS,1536);
+	  arm_offset_f32(Voltage_12, -2048.0,Voltage_12_RMS,1536);
+
+	  arm_scale_f32(Current_12_RMS,0.00161132,Current_12_RMS,1536);
+	  arm_scale_f32(Voltage_12_RMS,0.00161132,Voltage_12_RMS,1536);
+
+	  arm_rms_f32(Current_12_RMS,1536,&CurrentReal);
+	  arm_rms_f32(Voltage_12_RMS,1536,&VoltageReal);
+
+	  CurrentReal/=2.0;
+	  VoltageReal/=2.0;
+
+
+	  if(Mode==0)
+	  {
+		  Cpid_error = CurrentSet - CurrentReal;
+		  PWM += arm_pid_f32(&CPID, Cpid_error);
+		  if(PWM>2880)
+		  {
+			  PWM=2880;
+			  TIM3->CCR1 = 2880;
+		  }
+		  else if(PWM<0)
+		  {
+			  PWM=0;
+			  TIM3->CCR1 = 0;
+		  }
+		  else
+		  {
+			  TIM3->CCR1 = PWM;
+		  }
+	  }
+	  else{}
+
+
+
+
+//	  for (int var = 0; var < 1024; ++var)
+//	  {
+//		  OutData[0]=Current_12_RMS[var]*100;
+//		  OutData[1]=Voltage_12_RMS[var]*100;
+//		  OutPut_Data();
+//	  }
+
+	  for (int var = 0; var < 12; ++var)
+	  {
+		  arm_fir_f32(&FIR, Current_12 + (var * BLOCK_SIZE), Current_12_FIR_out + (var * BLOCK_SIZE),BLOCK_SIZE);
+	  }
+	  for (int var = 0; var < 12; ++var)
+	  {
+		  arm_fir_f32(&FIR, Voltage_12 + (var * BLOCK_SIZE), Voltage_12_FIR_out + (var * BLOCK_SIZE),BLOCK_SIZE);
+	  }
+
+//	  for (int var = 0; var < 1536; ++var)
+//	  {
+//		  OutData[0]=Current_12_FIR_out[var];
+//		  OutData[1]=Voltage_12_FIR_out[var];
+//		  OutPut_Data();
+//	  }
+
+	  for (int var = 64; var < 1536; ++var)
+	  {
+		  if(Voltage_12_FIR_out[var-1]>2047&&Voltage_12_FIR_out[var]<2047)
+		  {
+			  memcpy(Current_12_FFT_in,Current_12_FIR_out+var,1024*sizeof(float32_t));
+			  memcpy(Voltage_12_FFT_in,Voltage_12_FIR_out+var,1024*sizeof(float32_t));
+			  break;
+		  }
+
+
+	  }
+
+//	  	  for (int var = 0; var < 1024; ++var)
+//	  	  {
+//	  		  OutData[0]=Current_12_FFT_in[var];
+//	  		  OutData[1]=Voltage_12_FFT_in[var];
+//	  		  OutPut_Data();
+//	  	  }
+
+	  arm_rfft_fast_f32(&FFT, Current_12_FFT_in, Current_12_FFT_out, 0);
+	  arm_rfft_fast_f32(&FFT, Voltage_12_FFT_in, Voltage_12_FFT_out, 0);
+
+//	  for (int var = 0; var < 1024; ++var)
+//	  {
+//		  OutData[0]=Current_12_FFT_out[var];
+//		  OutData[1]=Voltage_12_FFT_out[var];
+//		  OutPut_Data();
+//	  }
+
+	  Current_Arg=atan2(Current_12_FFT_out[9],Current_12_FFT_out[8]);
+	  Voltage_Arg=atan2(Voltage_12_FFT_out[9],Voltage_12_FFT_out[8]);
+
+
+	  PHD[PHDtimes]=Voltage_Arg-Current_Arg;
+	  PHDtimes++;
+	  if(PHDtimes>9)
+	  {
+		  PHDtimes=0;
+		  arm_mean_f32(PHD, 10, &PHD[10]);
+	  }
+
+  }
+
+  /* USER CODE END TIM2_IRQn 1 */
 }
 
 /**
@@ -579,149 +788,17 @@ void TIM3_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM4 global interrupt.
+  * @brief This function handles USART2 global interrupt.
   */
-void TIM4_IRQHandler(void)
+void USART2_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM4_IRQn 0 */
+  /* USER CODE BEGIN USART2_IRQn 0 */
 
-  /* USER CODE END TIM4_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim4);
-  /* USER CODE BEGIN TIM4_IRQn 1 */
+  /* USER CODE END USART2_IRQn 0 */
+  HAL_UART_IRQHandler(&huart2);
+  /* USER CODE BEGIN USART2_IRQn 1 */
 
-  CurrentReal=0;
-
-  for(int x=0;x<16;x++)
-  {
-	  CurrentReal=CurrentReal+Current_12[x];
-  }
-
-  CurrentReal/=16*4096/(3.3);
-  if(Mode==0)
-  {
-	  if(VoltageReal>VoltageSet)
-	  {
-		  SubMode=0;
-	  }
-	  else
-	  {
-		  if(CurrentReal>(CurrentSet*0.9))
-		  {
-			  SubMode=1;
-		  }
-		  else
-		  {
-			  SubMode=0;
-		  }
-	  }
-
-
-  }
-
-
-
-  if((Mode==0&&SubMode==1)||Mode==2)
-  {
-
-		  Cpid_error = CurrentSet - CurrentReal;
-		  PWM += arm_pid_f32(&CPID, Cpid_error);
-
-		  if(PWM>1890)
-		  {
-			  PWM=1890;
-			  TIM3->CCR1 = 1890;
-		  }
-		  else if(PWM<0)
-		  {
-			  PWM=0;
-			  TIM3->CCR1 = 0;
-		  }
-		  else
-		  {
-			  TIM3->CCR1 = PWM;
-		  }
-
-  }
-
-  /* USER CODE END TIM4_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM5 global interrupt.
-  */
-void TIM5_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM5_IRQn 0 */
-
-  /* USER CODE END TIM5_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim5);
-  /* USER CODE BEGIN TIM5_IRQn 1 */
-  VoltageReal=0.0;
-
-
-  for(int x=0;x<ADCTIMES;x++)
-  {
-	  VoltageReal=VoltageReal+Voltage_12[x]/(1.0*ADCTIMES);
-  }
-VoltageReal/=4096/(10*3.3);
-
-
-
-
-
-  if((Mode==0&&SubMode==0)||Mode==1)
-  {
-
-	  Vpid_error = VoltageSet - VoltageReal;
-	  PWM += arm_pid_f32(&VPID, Vpid_error);
-
-
-	  if(PWM>1890)
-	  {
-		  PWM=1890;
-		  TIM3->CCR1 = 1890;
-	  }
-	  else if(PWM<0)
-	  {
-		  PWM=0;
-		  TIM3->CCR1 = 0;
-	  }
-	  else
-	  {
-		  TIM3->CCR1 = PWM;
-	  }
-  }
-
-
-  /* USER CODE END TIM5_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA2 stream0 global interrupt.
-  */
-void DMA2_Stream0_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
-
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc1);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA2 stream2 global interrupt.
-  */
-void DMA2_Stream2_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA2_Stream2_IRQn 0 */
-
-  /* USER CODE END DMA2_Stream2_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc2);
-  /* USER CODE BEGIN DMA2_Stream2_IRQn 1 */
-
-  /* USER CODE END DMA2_Stream2_IRQn 1 */
+  /* USER CODE END USART2_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

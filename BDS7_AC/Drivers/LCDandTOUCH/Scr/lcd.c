@@ -274,8 +274,11 @@ _m_tp_dev tp_dev =
 		TP_Init,
 		TP_Scan,
 		TP_Adjust,
-		0,
-		0,
+		/*
+		 * 0,0,
+		 */
+		{},
+		{},
 		0,
 		0,
 		0,

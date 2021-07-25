@@ -1,14 +1,17 @@
-10:32:38 **** Incremental Build of configuration Debug for project BDS7_AC ****
+14:24:17 **** Incremental Build of configuration Debug for project BDS7_AC ****
 make -j8 all 
-arm-none-eabi-size   BDS7_AC.elf 
-   text	   data	    bss	    dec	    hex	filename
-  44460	    512	   2792	  47764	   ba94	BDS7_AC.elf
-гд???????????гд????? default.size.stdout
+arm-none-eabi-gcc "../Drivers/TFT_Driver/Src/hmi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -I../Drivers/output/Inc -I../Drivers/TFT_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/TFT_Driver/Src/hmi_driver.d" -MT"Drivers/TFT_Driver/Src/hmi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/TFT_Driver/Src/hmi_driver.o"
+arm-none-eabi-gcc -o "BDS7_AC.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS7_AC\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS7_AC.map" -Wl,--gc-sections -static -L"D:\Work-Ele\A-KEIL\BDS7_AC\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BDS7_AC.elf
  
-10:32:40 **** Incremental Build of configuration Debug for project BDS7_AC ****
-make -j8 all 
 arm-none-eabi-size   BDS7_AC.elf 
+arm-none-eabi-objdump -h -S  BDS7_AC.elf  > "BDS7_AC.list"
+arm-none-eabi-objcopy  -O binary  BDS7_AC.elf  "BDS7_AC.bin"
    text	   data	    bss	    dec	    hex	filename
-  44460	    512	   2792	  47764	   ba94	BDS7_AC.elf
-гд???????????гд????? default.size.stdout
+ 138324	    608	  56488	 195420	  2fb5c	BDS7_AC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BDS7_AC.bin
+ 
+Finished building: BDS7_AC.list
  

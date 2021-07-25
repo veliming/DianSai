@@ -1,6 +1,3 @@
-DeviceConfigurationTool..UpdaterCheckInterval=5
-DeviceConfigurationTool..UpdaterDataRefresh=dataRefreshDataOnly
-DeviceConfigurationTool..UpdaterDataRefreshInterfval=3
 DeviceConfigurationTool.AskToDoCodeGenerationOnIocSave=false
 DeviceConfigurationTool.AskToSwitchToCPerspectiveOnCodeGeneration=false
 DeviceConfigurationTool.AskToSwitchToCdtPerspective=false

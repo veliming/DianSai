@@ -1,0 +1,2 @@
+hmi_user_uart.c:33:6:TFT_Init	16	static
+hmi_user_uart.c:39:7:SendChar	16	static

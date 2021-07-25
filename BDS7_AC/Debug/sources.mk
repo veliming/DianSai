@@ -1,5 +1,5 @@
 ################################################################################
-# 自动生成的文件。不要编辑！
+# Automatically-generated file. Do not edit!
 # Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
@@ -26,4 +26,6 @@ Drivers/LCD5110/Scr \
 Drivers/LCDandTOUCH/Scr \
 Drivers/Obase/Scr \
 Drivers/STM32F4xx_HAL_Driver/Src \
+Drivers/TFT_Driver/Src \
+Drivers/output/Scr \
 

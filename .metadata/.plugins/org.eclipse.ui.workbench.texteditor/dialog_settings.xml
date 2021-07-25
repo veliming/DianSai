@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="Freq"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="VoltageReal"/>
 		<list key="findhistory">
-			<item value="VoltageReal"/>
-			<item value="PWM"/>
-			<item value="limit"/>
-			<item value="kp"/>
-			<item value="PEin(0)"/>
-			<item value="&#x09;{"/>
-			<item value="q31_t"/>
-			<item value="u8"/>
+			<item value="Freq"/>
+			<item value="ch0_period"/>
+			<item value="flagnum"/>
+			<item value="PHD"/>
+			<item value="|"/>
+			<item value="0.05"/>
+			<item value="0.1"/>
+			<item value="0.2"/>
+			<item value="0.5"/>
+			<item value="CurrentSet"/>
+			<item value="1.0"/>
+			<item value="5.0"/>
+			<item value="VoltageSet"/>
+			<item value="Current_Arg"/>
+			<item value="tan"/>
 		</list>
 		<list key="replacehistory">
-			<item value="PBin(5)"/>
-			<item value="uint8_t"/>
-			<item value=""/>
-			<item value="tft"/>
-			<item value="16"/>
-			<item value="30"/>
-			<item value="1200"/>
-			<item value="2000"/>
+			<item value="32"/>
+			<item value="160"/>
+			<item value="PWM"/>
+			<item value="0.02"/>
+			<item value="0.1"/>
+			<item value="CurrentSet"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1269"/>
-		<item key="DIALOG_Y_ORIGIN" value="108"/>
+		<item key="DIALOG_X_ORIGIN" value="692"/>
+		<item key="DIALOG_Y_ORIGIN" value="478"/>
 		<item key="DIALOG_WIDTH" value="326"/>
 		<item key="DIALOG_HEIGHT" value="453"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>

@@ -385,7 +385,7 @@ void TIM4_IRQHandler(void)
   {
 
 
-	  //防超�???
+	  //防超�????
 	  ADS_Read_All_Raw(&ads, ads_data);
 	  if(ads_data[0]>(32767/AmpRate+32767))
 	  {

@@ -20,6 +20,7 @@
 ----------------------------------------------------------------------------------------
                           1. 基于STM32平台串口驱动
 ----------------------------------------------------------------------------------------*/
+
 #include "main.h"
 #include "hmi_user_uart.h"
 #include "hmi_driver.h"
@@ -28,15 +29,15 @@
 #include "obase.h"
 #include "stm32f4xx_hal_uart.h"
 
-extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart3;
 
 void TFT_Init(u8* buf)
 {
-    HAL_UART_Receive_IT(&huart2, buf, 1);//使能接收中断
+    HAL_UART_Receive_IT(&huart3, buf, 1);//使能接收中断
     queue_reset();
 }
 
 void  SendChar(uchar t)
 {
-	HAL_UART_Transmit(&huart2, &t, 1, 1);
+	HAL_UART_Transmit(&huart3, &t, 1, 1);
 }

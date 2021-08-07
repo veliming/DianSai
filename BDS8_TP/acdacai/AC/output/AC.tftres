@@ -1,0 +1,10 @@
+<Resource>
+    <pages>
+        <page name="Screen0" id="0" />
+    </pages>
+    <images>
+        <image id="0" url="d:\work-ele\a-keil\bds7_ac\acdacai\ac\Images\1.png" effect_width="117" effect_height="56" />
+        <image id="1" url="C:\Users\QUAR-T~1\AppData\Local\Temp\cursor_0_0.png" effect_width="24" effect_height="24" />
+    </images>
+    <waves />
+</Resource>

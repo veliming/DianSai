@@ -26,6 +26,9 @@
 #include "arm_math.h"
 #include "stdio.h"
 #include "outputdata.h"
+#include "cmd_process.h"
+#include "cmd_queue.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -39,10 +42,10 @@
 #define FFT_LENGTH        1024 //FFT长度
 
 
-#define NUM 1536 //�?????????轮采样点�?????????
-#define BLOCK_SIZE 128 //计算�?????????次FIR
-#define FIR_order 26 //滤波器阶�?????????
-#define FIR_Len 26+1 //滤波器系数个�?????????
+#define NUM 1536 //�????????????轮采样点�????????????
+#define BLOCK_SIZE 128 //计算�????????????次FIR
+#define FIR_order 26 //滤波器阶�????????????
+#define FIR_Len 26+1 //滤波器系数个�????????????
 
 /* USER CODE END PD */
 
@@ -60,9 +63,7 @@ TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim5;
 DMA_HandleTypeDef hdma_tim5_ch1;
 
-UART_HandleTypeDef huart2;
-DMA_HandleTypeDef hdma_usart2_rx;
-DMA_HandleTypeDef hdma_usart2_tx;
+UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 
@@ -76,6 +77,7 @@ char show2[20];
 char show3[20];
 char show4[20];
 char show5[20];
+unsigned char TFTshow1[20];
 
 float32_t Zmo[3];
 
@@ -99,7 +101,7 @@ double CurrentSet=1.0;
 
 int16_t PWM=0;
 
-float FIR_State[BLOCK_SIZE+FIR_order];//FIR滤波器状态缓�?????????
+float FIR_State[BLOCK_SIZE+FIR_order];//FIR滤波器状态缓�????????????
 float fir_params[FIR_Len] = {
    0.005470681004, 0.006434587762, 0.009209979326,  0.01367058046,  0.01958314888,
     0.02662089281,  0.03438298777,  0.04241899773,  0.05025664717,  0.05743118003,
@@ -119,6 +121,9 @@ float32_t PHD[11];
 uint8_t PHDtimes=0;
 
 extern float OutData[4];
+
+uint8_t recive[128];
+qsize size=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -128,16 +133,16 @@ static void MX_DMA_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
-static void MX_USART2_UART_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM5_Init(void);
+static void MX_USART3_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+__attribute__ ((section(".ccm_ram"))) uint8_t data[64][1024]  = {0};
 /* USER CODE END 0 */
 
 /**
@@ -147,7 +152,7 @@ static void MX_TIM5_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	data[0][0] = 12;
 	CPID.Kp = 120; 			/* Proportional --比例参数 */
 	CPID.Ki = 0;         	/* Integral         --积分参数*/
 	CPID.Kd = 0; 			/* Derivative     --微分参数*/
@@ -175,9 +180,9 @@ int main(void)
   MX_TIM3_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
-  MX_USART2_UART_Init();
   MX_TIM2_Init();
   MX_TIM5_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_TIM_Base_Start_IT(&htim2);
@@ -193,6 +198,7 @@ int main(void)
   arm_pid_init_f32(&CPID, 1);
 
   LCD_init();
+  TFT_Init(recive);
 
   /* USER CODE END 2 */
 
@@ -204,20 +210,23 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+
+
+
 	if( (HAL_GetTick()-MainTick)>300)
 	{
 		if(frame==0)
 		{
 			Zmo[0]=VoltageReal/CurrentReal;
 			Zmo[1]=PHD[10];
-			arm_cmplx_mag_f32(Zmo,&Zmo[3],1);
+			arm_cmplx_mag_f32(Zmo,&Zmo[2],1);
 
-			sprintf(show0,"Vrms:%.4f   ",VoltageReal);
-			sprintf(show1,"Crms:%.4f   ",CurrentReal);
-			sprintf(show2,"Z-R:%.4f    ",Zmo[0]);
-			sprintf(show3,"Z-X:%.4f    ",Zmo[1]);
-			sprintf(show4,"[Z]:%.4f    ",Zmo[3]);
-			sprintf(show5,"ARG:%.2f    ",Zmo[1]*180/PI);
+			sprintf(show0,"Vrms:%.3f   ",VoltageReal);
+			sprintf(show1,"Crms:%.3f   ",CurrentReal);
+			sprintf(show2,"Z-R:%.4f    ",Zmo[0]*cos(Zmo[1]*180/PI-0.1));
+			sprintf(show3,"Z-X:%.4f    ",Zmo[0]*sin(Zmo[1]*180/PI-0.1));
+			sprintf(show4,"[Z]:%.4f    ",Zmo[2]);
+			sprintf(show5,"ARG:%.2f    ",Zmo[1]*180/PI-0.1);
 
 			LCD_write_String(0,0,show0);
 			LCD_write_String(0,1,show1);
@@ -225,6 +234,15 @@ int main(void)
 			LCD_write_String(0,3,show3);
 			LCD_write_String(0,4,show4);
 			LCD_write_String(0,5,show5);
+
+
+			sprintf(TFTshow1,"%.3f%+.3fj",Zmo[0]*cos(Zmo[1]*180/PI-0.1),Zmo[0]*sin(Zmo[1]*180/PI-0.1));
+			SetTextValue(0,13,TFTshow1);
+			SetTextValueFloat(0, 4, VoltageReal);
+			SetTextValueFloat(0, 6, CurrentReal);
+			SetTextValueFloat(0, 5, Zmo[1]*180/PI-0.1);
+			SetTextValueFloat(0, 12, 80000000.0/(Freq*0.99995));
+			SetTextValueFloat(0, 14, Zmo[2]);
 		}
 		else
 		{
@@ -238,7 +256,7 @@ int main(void)
 			{
 				sprintf(show2,"Mode: MANUL    ");
 			}
-			sprintf(show3,"Freq:%.4f     ",80000000.0/(Freq*1.0-80.0));
+			sprintf(show3,"Freq:%.4f     ",80000000.0/(Freq*0.99995));
 			sprintf(show4,"              ");
 			sprintf(show5,"              ");
 
@@ -572,35 +590,35 @@ static void MX_TIM5_Init(void)
 }
 
 /**
-  * @brief USART2 Initialization Function
+  * @brief USART3 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_USART2_UART_Init(void)
+static void MX_USART3_UART_Init(void)
 {
 
-  /* USER CODE BEGIN USART2_Init 0 */
+  /* USER CODE BEGIN USART3_Init 0 */
 
-  /* USER CODE END USART2_Init 0 */
+  /* USER CODE END USART3_Init 0 */
 
-  /* USER CODE BEGIN USART2_Init 1 */
+  /* USER CODE BEGIN USART3_Init 1 */
 
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 921600;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN USART2_Init 2 */
+  /* USER CODE BEGIN USART3_Init 2 */
 
-  /* USER CODE END USART2_Init 2 */
+  /* USER CODE END USART3_Init 2 */
 
 }
 
@@ -617,12 +635,6 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
-  /* DMA1_Stream5_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
-  /* DMA1_Stream6_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
 
 }
 
@@ -640,9 +652,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */

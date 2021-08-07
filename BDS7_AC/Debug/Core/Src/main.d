@@ -32,7 +32,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Drivers/LCD5110/Inc/lcd5510.h ../Drivers/Obase/Inc/obase.h \
  ../Drivers/CMSIS/DSP/Include/arm_math.h \
- ../Drivers/output/Inc/outputdata.h
+ ../Drivers/output/Inc/outputdata.h \
+ ../Drivers/TFT_Driver/Inc/cmd_process.h \
+ ../Drivers/TFT_Driver/Inc/hmi_user_uart.h ../Core/Inc/stm32f4xx_it.h \
+ ../Drivers/TFT_Driver/Inc/hmi_driver.h \
+ ../Drivers/TFT_Driver/Inc/cmd_queue.h
 
 ../Core/Inc/main.h:
 
@@ -105,3 +109,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/CMSIS/DSP/Include/arm_math.h:
 
 ../Drivers/output/Inc/outputdata.h:
+
+../Drivers/TFT_Driver/Inc/cmd_process.h:
+
+../Drivers/TFT_Driver/Inc/hmi_user_uart.h:
+
+../Core/Inc/stm32f4xx_it.h:
+
+../Drivers/TFT_Driver/Inc/hmi_driver.h:
+
+../Drivers/TFT_Driver/Inc/cmd_queue.h:

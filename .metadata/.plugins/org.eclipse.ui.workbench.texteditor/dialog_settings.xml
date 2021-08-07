@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Freq"/>
+		<item key="selection" value="a"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="a"/>
+			<item value="END2"/>
+			<item value="ROW2"/>
+			<item value="END1"/>
+			<item value="A_tick"/>
+			<item value="DCPID"/>
+			<item value="    &#x09;&#x09;PWM += arm_pid_f32(&amp;DCPID, DCpid_error);"/>
+			<item value="PW_CReal_2"/>
+			<item value="ARR"/>
+			<item value="TIM3"/>
+			<item value="TIM2"/>
+			<item value="CCR2"/>
 			<item value="Freq"/>
-			<item value="ch0_period"/>
-			<item value="flagnum"/>
-			<item value="PHD"/>
-			<item value="|"/>
-			<item value="0.05"/>
-			<item value="0.1"/>
-			<item value="0.2"/>
-			<item value="0.5"/>
-			<item value="CurrentSet"/>
-			<item value="1.0"/>
-			<item value="5.0"/>
-			<item value="VoltageSet"/>
-			<item value="Current_Arg"/>
-			<item value="tan"/>
+			<item value="ADCflag"/>
+			<item value="PW_CReal"/>
 		</list>
 		<list key="replacehistory">
+			<item value="END4"/>
+			<item value="ROW4"/>
+			<item value="END3"/>
+			<item value="ROW3"/>
+			<item value="END2"/>
+			<item value="2520"/>
 			<item value="32"/>
 			<item value="160"/>
 			<item value="PWM"/>
@@ -34,10 +40,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="692"/>
-		<item key="DIALOG_Y_ORIGIN" value="478"/>
-		<item key="DIALOG_WIDTH" value="326"/>
-		<item key="DIALOG_HEIGHT" value="453"/>
-		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+		<item key="DIALOG_X_ORIGIN" value="1168"/>
+		<item key="DIALOG_Y_ORIGIN" value="161"/>
+		<item key="DIALOG_WIDTH" value="278"/>
+		<item key="DIALOG_HEIGHT" value="410"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
 	</section>
 </section>

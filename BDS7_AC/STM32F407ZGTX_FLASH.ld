@@ -166,7 +166,15 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM
-
+  .ccm_ram :
+  {
+    . = ALIGN(4);
+    __CCM_RAM_SYMBOLS = .;  /* create a global symbol at ccmram start */
+    *(.ccm_ram)
+    *(.ccm_ram*)
+    . = ALIGN(4);
+    __ECCM_RAM_SYMBOLS = .;  /* create a global symbol at ccmram end */
+  } > CCMRAM AT> FLASH
   /* Remove information from the compiler libraries */
   /DISCARD/ :
   {

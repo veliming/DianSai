@@ -67,10 +67,6 @@ qsize queue_find_cmd(qdata *buffer,qsize buf_len)
 
 		cmd_state = ((cmd_state<<8)|_data);//拼接最后4个字节，组成一个32位整数
 
-		if(cmd_state==CMD_IPD)
-		{
-			IPD = _data-0x30;
-		}
 		//最后4个字节与帧尾匹配，得到完整帧
 		if(cmd_state==CMD_TAIL)
 		{

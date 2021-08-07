@@ -1,7 +1,7 @@
 cmd_process.c:17:6:ProcessMessage	72	static
 cmd_process.c:92:6:SetTFTText	40	static
 cmd_process.c:102:6:SetTextValueInt32	32	static
-cmd_process.c:109:6:SetTextValueFloat	16	static
+cmd_process.c:109:6:SetTextValueFloat	40	static
 cmd_process.c:118:6:UpdateUI	4	static
 cmd_process.c:127:6:NotifyScreen	16	static
 cmd_process.c:137:6:NotifyTouchXY	24	static

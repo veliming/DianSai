@@ -108,11 +108,11 @@ void SetTextValueInt32(uint16 screen_id, uint16 control_id, int32 value)
 
 void SetTextValueFloat(uint16 screen_id, uint16 control_id, float value)
 {
-	/*
+
 	uchar buffer[12] = {0};
 	snprintf((char *)buffer, sizeof(buffer), "%.1f", value); //把浮点数转换为字符串(保留一位小数)
 	SetTextValue(screen_id, control_id, buffer);
-	*/
+
 }
 
 void UpdateUI()

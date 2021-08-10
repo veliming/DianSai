@@ -17,9 +17,9 @@
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item key="DIALOG_X_ORIGIN" value="738"/>
 		<item key="DIALOG_Y_ORIGIN" value="148"/>
-		<item key="DIALOG_WIDTH" value="462"/>
-		<item key="DIALOG_HEIGHT" value="574"/>
-		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.07563|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+		<item key="DIALOG_WIDTH" value="398"/>
+		<item key="DIALOG_HEIGHT" value="490"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.STRING_VARIABLE_SELECTION_DIALOG_SECTION">
 		<item key="DIALOG_X_ORIGIN" value="241"/>

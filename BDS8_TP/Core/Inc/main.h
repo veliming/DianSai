@@ -70,6 +70,16 @@ void Error_Handler(void);
 #define Trig1_Pin GPIO_PIN_0
 #define Trig1_GPIO_Port GPIOF
 #define Trig1_EXTI_IRQn EXTI0_IRQn
+#define PW_C_Pin GPIO_PIN_6
+#define PW_C_GPIO_Port GPIOF
+#define PW_V_Pin GPIO_PIN_7
+#define PW_V_GPIO_Port GPIOF
+#define DC_V_Pin GPIO_PIN_0
+#define DC_V_GPIO_Port GPIOC
+#define BT_C_Pin GPIO_PIN_4
+#define BT_C_GPIO_Port GPIOC
+#define BT_V_Pin GPIO_PIN_0
+#define BT_V_GPIO_Port GPIOB
 #define COL4_Pin GPIO_PIN_1
 #define COL4_GPIO_Port GPIOG
 #define COL3_Pin GPIO_PIN_7

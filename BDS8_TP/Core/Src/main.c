@@ -75,13 +75,15 @@ unsigned char TFTshow1[20];
 
 float32_t Zmo[3];
 
-uint16_t ADC1_Value[6];/*电池电压电流andDCDC电压*4*/
+uint16_t ADC1_Value[12];/*电池电压电流andDCDC电压*4*/
 uint16_t ADC2_Value[ADCTIMES];
 uint16_t ADC3_Value[8];/**/
 
 
 float32_t BT_VReal;
 float32_t BT_CReal;
+float32_t BT_PReal_La;
+float32_t BT_PReal;
 float32_t DC_VReal;
 float32_t PW_VReal;
 float32_t PW_CReal_1;
@@ -96,6 +98,11 @@ int16_t PWM=1400-1;
 uint32_t MainTick;
 uint32_t SubTick;
 
+//Mode
+/*0 Init
+1 Befor_Grid
+2 Grided
+3 ShotDown*/
 uint8_t Mode=0;
 uint8_t frame=0;
 
@@ -252,10 +259,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_I2C_Mem_Read(&hi2c1, ADDR_AT24C02_Read, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)PHASE,8, 100);
 
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)ADC1_Value, 6);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)ADC1_Value, 12);
   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)ADC3_Value, 8);
 
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);/*pwm波频�??????????????????????*/
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);/*pwm波频�??????????????????????????*/
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_4);
@@ -278,8 +285,18 @@ int main(void)
 
   	if( (HAL_GetTick()-MainTick)>300)
 	{
-		sprintf(show0,"%d",PHASE[0]);
+		sprintf(show0,"%d   ",Mode);
+		sprintf(show1,"BT_C:%.3f",BT_CReal);
+		sprintf(show2,"BT_V:%.3f",BT_VReal);
+		sprintf(show3,"DC_V:%.3f",DC_VReal);
+		sprintf(show4,"PW_V:%.3f",PW_VReal);
+		sprintf(show5,"PW_C:%.3f",PW_CReal_1);
 		LCD_write_String(0,0,show0);
+		LCD_write_String(0,1,show1);
+		LCD_write_String(0,2,show2);
+		LCD_write_String(0,3,show3);
+		LCD_write_String(0,4,show4);
+		LCD_write_String(0,5,show5);
 		HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 		MainTick=HAL_GetTick();
 	}
@@ -351,7 +368,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV6;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = ENABLE;
@@ -359,7 +376,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.NbrOfConversion = 6;
+  hadc1.Init.NbrOfConversion = 12;
   hadc1.Init.DMAContinuousRequests = ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SEQ_CONV;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
@@ -377,7 +394,6 @@ static void MX_ADC1_Init(void)
   }
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_14;
   sConfig.Rank = 2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -385,7 +401,6 @@ static void MX_ADC1_Init(void)
   }
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_10;
   sConfig.Rank = 3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -400,6 +415,7 @@ static void MX_ADC1_Init(void)
   }
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
+  sConfig.Channel = ADC_CHANNEL_14;
   sConfig.Rank = 5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -408,6 +424,49 @@ static void MX_ADC1_Init(void)
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
   sConfig.Rank = 6;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Rank = 7;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Rank = 8;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Channel = ADC_CHANNEL_10;
+  sConfig.Rank = 9;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Rank = 10;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Rank = 11;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Rank = 12;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -438,7 +497,7 @@ static void MX_ADC3_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc3.Instance = ADC3;
-  hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV6;
+  hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc3.Init.Resolution = ADC_RESOLUTION_12B;
   hadc3.Init.ScanConvMode = ENABLE;
   hadc3.Init.ContinuousConvMode = ENABLE;
@@ -620,6 +679,7 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
+  sConfigOC.Pulse = 0;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     Error_Handler();
@@ -807,11 +867,13 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOG, LED0_Pin|LED1_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : Trig2_Pin */
-  GPIO_InitStruct.Pin = Trig2_Pin;
+  /*Configure GPIO pins : Trig2_Pin ROW1_Pin ROW2_Pin ROW3_Pin
+                           ROW4_Pin */
+  GPIO_InitStruct.Pin = Trig2_Pin|ROW1_Pin|ROW2_Pin|ROW3_Pin
+                          |ROW4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(Trig2_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pins : GND_Pin COL3_Pin COL2_Pin COL1_Pin */
   GPIO_InitStruct.Pin = GND_Pin|COL3_Pin|COL2_Pin|COL1_Pin;
@@ -830,7 +892,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : Trig1_Pin */
   GPIO_InitStruct.Pin = Trig1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(Trig1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : COL4_Pin */
@@ -839,12 +901,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(COL4_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : ROW1_Pin ROW2_Pin ROW3_Pin ROW4_Pin */
-  GPIO_InitStruct.Pin = ROW1_Pin|ROW2_Pin|ROW3_Pin|ROW4_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD5110RESET_Pin */
   GPIO_InitStruct.Pin = LCD5110RESET_Pin;

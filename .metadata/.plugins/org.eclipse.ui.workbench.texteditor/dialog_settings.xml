@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="a"/>
+		<item key="selection" value="PHASE"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="PHASE"/>
+			<item value="DC_VReal"/>
+			<item value="ADC3_Value_mem2"/>
+			<item value="Mode"/>
 			<item value="a"/>
 			<item value="END2"/>
 			<item value="ROW2"/>
@@ -19,10 +23,6 @@
 			<item value="ARR"/>
 			<item value="TIM3"/>
 			<item value="TIM2"/>
-			<item value="CCR2"/>
-			<item value="Freq"/>
-			<item value="ADCflag"/>
-			<item value="PW_CReal"/>
 		</list>
 		<list key="replacehistory">
 			<item value="END4"/>

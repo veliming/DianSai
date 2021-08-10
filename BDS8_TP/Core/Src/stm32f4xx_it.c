@@ -60,6 +60,8 @@ extern uint16_t ADC2_Value[ADCTIMES];
 extern uint16_t ADC3_Value[8];/**/
 
 extern int16_t PHASE[1];/*存储相位*/
+int16_t PHASE_Order=0;
+
 
 uint16_t ADC3_Value_mem1[8];/**/
 uint16_t ADC3_Value_mem2[8];/**/
@@ -72,6 +74,8 @@ extern double VSet;
 
 extern float32_t BT_VReal;
 extern float32_t BT_CReal;
+extern float32_t BT_PReal_La;
+extern float32_t BT_PReal;
 extern float32_t DC_VReal;
 extern float32_t PW_VReal;
 extern float32_t PW_CReal_1;
@@ -83,10 +87,11 @@ extern float32_t Freq;
 
 extern int16_t PWM;
 
-volatile uint32_t tick;
-volatile uint32_t A_tick;
-volatile uint32_t Ala_tick;
-volatile uint32_t B_tick;
+volatile uint32_t tick;//按键时刻
+volatile uint32_t A_tick;//a1时刻
+volatile uint32_t Ala_tick;//a1上一个时�????
+volatile uint32_t B_tick;//b1时刻
+volatile uint32_t Mppt_tick;//mppt延时时刻
 int8_t ADCflag=0;
 
 double DCpid_error;
@@ -102,7 +107,7 @@ extern const float COSB[];
 extern const float COSC[];
 
 uint16_t COSNum=0;
-float32_t COSNul=1.0;
+float32_t COSNul=0.0;
 uint16_t ARR=5600-1;
 
 /* USER CODE END PV */
@@ -313,14 +318,14 @@ void TIM2_IRQHandler(void)
   if((TIM5->CNT)-A_tick>(((A_tick-Ala_tick)/8.0)-PHASE[0])&&ADCflag==1)
   {
 		memcpy(ADC3_Value_mem1,ADC3_Value,16);
-		//HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 		COSNum=0;
 		ADCflag=2;
   }
   if((TIM5->CNT)-A_tick>((A_tick-Ala_tick)*5.0/8.0-PHASE[0])&&ADCflag==2)
   {
 		memcpy(ADC3_Value_mem2,ADC3_Value,16);
-		//HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
   	ADCflag=0;
   }
   /* USER CODE END TIM2_IRQn 1 */
@@ -336,12 +341,21 @@ void TIM3_IRQHandler(void)
   /* USER CODE END TIM3_IRQn 0 */
   HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
-
-//  for(int i = 0; i < ADCTIMES;)
-//			{
-//  			BT_VReal = ADC1_Value[i++]/4095.0*3.3;
-//  			BT_CReal = ADC1_Value[i++]/4095.0*3.3;
-//			}
+  		BT_VReal=0.0;
+  		BT_CReal=0.0;
+  		DC_VReal=0.0;
+  		for(int i = 0; i < 4;i++)
+			{
+  			BT_VReal += ADC1_Value[i]/4095.0*3.3/4.0*14.67;
+			}
+  		for(int i = 4; i < 8;i++)
+			{
+  			BT_CReal += ADC1_Value[i]/4095.0*3.3/4.0;
+			}
+  		for(int i = 8; i < 12;i++)
+			{
+  			DC_VReal += ADC1_Value[i]/4095.0*3.3/4.0*14.67;
+			}
 
   	PW_VReal=0.0;
   	PW_CReal_1=0.0;
@@ -358,27 +372,110 @@ void TIM3_IRQHandler(void)
     	}
   	}
 
-    DC_VReal=0.0;
-    for(int i = 2; i < 6;i++)
-  	{
-    		DC_VReal += ADC1_Value[i]/4095.0*3.3*13.0/4.0;
-  	}
+		switch (Mode) {
+			case 0:
+			{
+				if((A_tick-B_tick)>3300)
+				{
+					PHASE_Order=0;
+				}
+				if((A_tick-B_tick)<-3300)
+				{
+					PHASE_Order=1;
+				}
+
+				COSNul+=0.01;
+				if(COSNul>=0.99)
+				{
+					COSNul=1;
+					Mode=1;
+				}
+				break;
+			}
+			case 1:
+			{
     		DCpid_error = PW_VReal - DC_VReal;
-    		PWM += arm_pid_f32(&DCPID, DCpid_error);
-	  if(PWM>2520-1)
-	  {
-		  	PWM=2520-1;
-		  	TIM2->CCR2 = (TIM2->ARR-1)*0.9;
-	  }
-	  else if(PWM<0)
-	  {
-	  		PWM=0;
-	  		TIM2->CCR2 = 0;
-	  }
-	  else
-	  {
-	  		TIM2->CCR2 = PWM;
-	  }
+    		PWM -= arm_pid_f32(&DCPID, DCpid_error);
+    		if(PWM>((TIM2->ARR-1)))
+    		{
+    			PWM=(TIM2->ARR-1);
+    			TIM2->CCR2 = (TIM2->ARR-1);
+    		}
+    		else if(PWM<(TIM2->ARR-1)*0.1)
+    		{
+    			PWM=(TIM2->ARR-1)*0.1;
+    			TIM2->CCR2 = (TIM2->ARR-1)*0.1;
+    		}
+    		else
+    		{
+    			TIM2->CCR2 = PWM;
+    		}
+    		break;
+			}
+			case 2:
+			{
+				if((HAL_GetTick()-Mppt_tick)>100)
+				{
+					BT_PReal_La=BT_PReal;
+					BT_PReal=BT_VReal*BT_CReal;
+					if(BT_PReal_La!=BT_PReal)
+					{
+						if(BT_PReal>BT_PReal_La)
+						{
+							PWM+=20;
+							if(PWM>((TIM2->ARR-1)*0.9))
+							{
+			    			PWM=((TIM2->ARR-1)*0.9);
+			    			TIM2->CCR2 = (TIM2->ARR-1)*0.9;
+							}
+							else
+							{
+								TIM2->CCR2 = PWM;
+							}
+						}
+						else
+						{
+							PWM-=20;
+							if(PWM<0)
+							{
+			    			PWM=0;
+			    			TIM2->CCR2 = 0;
+							}
+							else
+							{
+								TIM2->CCR2 = PWM;
+							}
+						}
+					}
+					Mppt_tick=HAL_GetTick();
+				}
+			}
+			case 3:
+			{
+				PWM=0;
+				TIM2->CCR2 = 0;
+				COSNul=0.0;
+				if(PHASE_Order==0)
+				{
+				  TIM2->CCR1=(COSA[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				  TIM2->CCR3=(COSB[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				  TIM2->CCR4=(COSC[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				}
+				else
+				{
+				  TIM2->CCR1=(COSC[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				  TIM2->CCR3=(COSB[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				  TIM2->CCR4=(COSA[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
+				}
+
+			}
+
+			default:
+				break;
+		}
+
+
+
 	  //Freq=1000000.0/(A_tick-Ala_tick);
 	  if((A_tick-Ala_tick)<20408&&(A_tick-Ala_tick)>19607)
 	  {
@@ -406,7 +503,7 @@ void EXTI15_10_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
-	if( (HAL_GetTick()-tick)>30)
+	if((HAL_GetTick()-tick)>30)
 	{
 		//ROW1
 			if(HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin)==0)
@@ -516,15 +613,22 @@ void EXTI15_10_IRQHandler(void)
 								case 1:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
+									PWM=0;
+									TIM2->CCR2 = 0;
 								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_RESET);
 								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_RESET);
 								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_RESET);
+								  HAL_GPIO_WritePin(SW4_GPIO_Port, SW4_Pin, GPIO_PIN_RESET);
+								  HAL_GPIO_WritePin(SW5_GPIO_Port, SW5_Pin, GPIO_PIN_RESET);
+								  HAL_GPIO_WritePin(SW6_GPIO_Port, SW6_Pin, GPIO_PIN_RESET);
+								  Mode=3;
 									//
 									goto END2;
 								}
 								case 2:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
+									Mode=2;
 								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_RESET);
 								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_SET);
 								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_RESET);
@@ -534,6 +638,7 @@ void EXTI15_10_IRQHandler(void)
 								case 3:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
+									Mode=2;
 								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_SET);
 								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_SET);
 								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_SET);

@@ -1,5 +1,5 @@
 ################################################################################
-# Automatically-generated file. Do not edit!
+# 自动生成的文件。不要编辑！
 # Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
@@ -59,34 +59,34 @@ OBJCOPY_BIN += \
 BDS7_AC.bin \
 
 
-# All Target
+# 所有目标
 all: main-build
 
-# Main-build Target
+# 主构建目标
 main-build: BDS7_AC.elf secondary-outputs
 
-# Tool invocations
+# 工具调用
 BDS7_AC.elf: $(OBJS) $(USER_OBJS) D:\Work-Ele\A-KEIL\BDS7_AC\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "BDS7_AC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Work-Ele\A-KEIL\BDS7_AC\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BDS7_AC.map" -Wl,--gc-sections -static -L"D:\Work-Ele\A-KEIL\BDS7_AC\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
-	@echo 'Finished building target: $@'
+	@echo '已结束构建目标： $@'
 	@echo ' '
 
 default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
-	@echo 'Finished building: $@'
+	@echo '已结束构建： $@'
 	@echo ' '
 
 BDS7_AC.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "BDS7_AC.list"
-	@echo 'Finished building: $@'
+	@echo '已结束构建： $@'
 	@echo ' '
 
 BDS7_AC.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "BDS7_AC.bin"
-	@echo 'Finished building: $@'
+	@echo '已结束构建： $@'
 	@echo ' '
 
-# Other Targets
+# 其他目标
 clean:
 	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) BDS7_AC.elf
 	-@echo ' '

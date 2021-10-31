@@ -8,7 +8,12 @@ PW_CReal_1
 PW_CReal_2
 ADC1_Value
 ADC3_Value
-COSNul
-(float32_t)0.02
-0.02
-1.0+0.02
+DCpid_error
+PWM
+coserror
+A_tick-Ala_tick
+PHASE
+PHASE[1]
+ADCflag
+Mode
+tp_dev

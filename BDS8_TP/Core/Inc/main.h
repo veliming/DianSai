@@ -74,8 +74,18 @@ void Error_Handler(void);
 #define PW_C_GPIO_Port GPIOF
 #define PW_V_Pin GPIO_PIN_7
 #define PW_V_GPIO_Port GPIOF
+#define GNDF9_Pin GPIO_PIN_9
+#define GNDF9_GPIO_Port GPIOF
+#define GNDF10_Pin GPIO_PIN_10
+#define GNDF10_GPIO_Port GPIOF
 #define DC_V_Pin GPIO_PIN_0
 #define DC_V_GPIO_Port GPIOC
+#define GNDC3_Pin GPIO_PIN_3
+#define GNDC3_GPIO_Port GPIOC
+#define GNDA1_Pin GPIO_PIN_1
+#define GNDA1_GPIO_Port GPIOA
+#define GNDA4_Pin GPIO_PIN_4
+#define GNDA4_GPIO_Port GPIOA
 #define BT_C_Pin GPIO_PIN_4
 #define BT_C_GPIO_Port GPIOC
 #define BT_V_Pin GPIO_PIN_0
@@ -126,6 +136,8 @@ void Error_Handler(void);
 #define LED0_GPIO_Port GPIOG
 #define LED1_Pin GPIO_PIN_14
 #define LED1_GPIO_Port GPIOG
+#define GNDG15_Pin GPIO_PIN_15
+#define GNDG15_GPIO_Port GPIOG
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

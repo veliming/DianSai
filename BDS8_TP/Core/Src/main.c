@@ -109,7 +109,8 @@ uint8_t frame=0;
 
 extern float OutData[4];
 
-int16_t PHASE[1];
+int16_t PHASE[2]={0,-450};
+
 
 const float COSB[]={
 		1.00000000,0.99994517,0.99978068,0.99950656,0.99912283,0.99862953,0.99802673,0.99731448,0.99649286,0.99556196,0.99452190,0.99337277,0.99211470,0.99074784,0.98927233,0.98768834,0.98599604,0.98419561,0.98228725,0.98027117,0.97814760,0.97591676,0.97357890,0.97113428,
@@ -225,8 +226,11 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-	DCPID.Kp = 1; 			/* Proportional --比例参数 */
-	DCPID.Ki = 1;         	/* Integral         --积分参数*/
+
+
+
+	DCPID.Kp = 0.5; 			/* Proportional --比例参数 */
+	DCPID.Ki = 0.01;         	/* Integral  --积分参数*/
 	DCPID.Kd = 0; 			/* Derivative     --微分参数*/
   /* USER CODE END 1 */
 
@@ -257,12 +261,16 @@ int main(void)
   MX_TIM5_Init();
   MX_ADC3_Init();
   /* USER CODE BEGIN 2 */
-  HAL_I2C_Mem_Read(&hi2c1, ADDR_AT24C02_Read, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)PHASE,8, 100);
+
+//  HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE1[0])),8, 1000);
+//  HAL_Delay(1);
+
+  HAL_I2C_Mem_Read(&hi2c1, ADDR_AT24C02_Read, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE[0])),8, 1000);
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)ADC1_Value, 12);
   HAL_ADC_Start_DMA(&hadc3, (uint32_t*)ADC3_Value, 8);
 
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);/*pwm波频�??????????????????????????*/
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);/*pwm波频�????????????????????????????????*/
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_4);
@@ -446,6 +454,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_10;
   sConfig.Rank = 9;
+  sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -639,7 +648,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 1-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_DOWN;
-  htim2.Init.Period = 2800-1;
+  htim2.Init.Period = 2700-1;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -669,17 +678,18 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
+  sConfigOC.Pulse = 2500-1;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
   }
+  sConfigOC.Pulse = 1400-1;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigOC.Pulse = 0;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     Error_Handler();
@@ -849,10 +859,16 @@ static void MX_GPIO_Init(void)
                           |LCD5110RESET_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GNDC13_GPIO_Port, GNDC13_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GNDC13_Pin|GNDC3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(COL4_GPIO_Port, COL4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, GNDF9_Pin|GNDF10_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GNDA1_Pin|GNDA4_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOG, COL4_Pin|GNDG15_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LCD5110SCE_GPIO_Port, LCD5110SCE_Pin, GPIO_PIN_SET);
@@ -882,25 +898,39 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : GNDC13_Pin */
-  GPIO_InitStruct.Pin = GNDC13_Pin;
+  /*Configure GPIO pins : GNDC13_Pin GNDC3_Pin */
+  GPIO_InitStruct.Pin = GNDC13_Pin|GNDC3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GNDC13_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : Trig1_Pin */
   GPIO_InitStruct.Pin = Trig1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(Trig1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : COL4_Pin */
-  GPIO_InitStruct.Pin = COL4_Pin;
+  /*Configure GPIO pins : GNDF9_Pin GNDF10_Pin */
+  GPIO_InitStruct.Pin = GNDF9_Pin|GNDF10_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(COL4_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : GNDA1_Pin GNDA4_Pin */
+  GPIO_InitStruct.Pin = GNDA1_Pin|GNDA4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : COL4_Pin GNDG15_Pin */
+  GPIO_InitStruct.Pin = COL4_Pin|GNDG15_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD5110RESET_Pin */
   GPIO_InitStruct.Pin = LCD5110RESET_Pin;
@@ -928,7 +958,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = SW1_Pin|SW2_Pin|SW3_Pin|SW4_Pin
                           |SW5_Pin|SW6_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 

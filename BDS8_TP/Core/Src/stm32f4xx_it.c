@@ -87,17 +87,18 @@ extern float32_t Freq;
 
 extern int16_t PWM;
 
-volatile uint32_t tick;//按键时刻
-volatile uint32_t A_tick;//a1时刻
-volatile uint32_t Ala_tick;//a1上一个时�????
-volatile uint32_t B_tick;//b1时刻
-volatile uint32_t Mppt_tick;//mppt延时时刻
+volatile int32_t tick;//按键时刻
+volatile int32_t A_tick;//a1时刻
+volatile int32_t Ala_tick;//a1上一个时�??????
+volatile int32_t B_tick;//b1时刻
+volatile int32_t Mppt_tick;//mppt延时时刻
 int8_t ADCflag=0;
 
 double DCpid_error;
 
 
 extern float OutData[4];
+
 
 extern uint8_t Mode;
 extern uint8_t frame;
@@ -107,8 +108,10 @@ extern const float COSB[];
 extern const float COSC[];
 
 uint16_t COSNum=0;
+uint16_t coserror=0;
 float32_t COSNul=0.0;
 uint16_t ARR=5600-1;
+
 
 /* USER CODE END PV */
 
@@ -277,9 +280,13 @@ void EXTI0_IRQHandler(void)
   /* USER CODE END EXTI0_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
   /* USER CODE BEGIN EXTI0_IRQn 1 */
+  //if(	(((TIM5->CNT-A_tick)%20000-20000)>=-40)&&(((TIM5->CNT-A_tick)%20000-20000)<=40)&&ADCflag==0	)
+  //{
   Ala_tick=A_tick;
   A_tick=TIM5->CNT;
   ADCflag=1;
+  //}
+  //HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
   /* USER CODE END EXTI0_IRQn 1 */
 }
 
@@ -293,7 +300,10 @@ void EXTI2_IRQHandler(void)
   /* USER CODE END EXTI2_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2);
   /* USER CODE BEGIN EXTI2_IRQn 1 */
-  B_tick=TIM5->CNT;
+  //if((TIM5->CNT-A_tick)<=20040&&(TIM5->CNT-A_tick)<=19960)
+
+    B_tick=TIM5->CNT;
+
   /* USER CODE END EXTI2_IRQn 1 */
 }
 
@@ -307,6 +317,8 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
+
+
   TIM2->CCR1=(COSA[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
   TIM2->CCR3=(COSB[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
   TIM2->CCR4=(COSC[COSNum]*COSNul+1.0)*(TIM2->ARR-1)/2.0;
@@ -325,9 +337,10 @@ void TIM2_IRQHandler(void)
   if((TIM5->CNT)-A_tick>((A_tick-Ala_tick)*5.0/8.0-PHASE[0])&&ADCflag==2)
   {
 		memcpy(ADC3_Value_mem2,ADC3_Value,16);
-		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		//HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
   	ADCflag=0;
   }
+
   /* USER CODE END TIM2_IRQn 1 */
 }
 
@@ -354,7 +367,7 @@ void TIM3_IRQHandler(void)
 			}
   		for(int i = 8; i < 12;i++)
 			{
-  			DC_VReal += ADC1_Value[i]/4095.0*3.3/4.0*14.67;
+  			DC_VReal += ADC1_Value[i]/4095.0*3.3/4.0*20.0;
 			}
 
   	PW_VReal=0.0;
@@ -363,7 +376,7 @@ void TIM3_IRQHandler(void)
     for(int i = 0; i < 8;i++)
   	{
     	if (i%2==0) {
-    		PW_VReal += ADC3_Value_mem1[i]/4095.0*3.3*14.66/4.0;
+    		PW_VReal += ADC3_Value_mem1[i]/4095.0*3.3*17.9/4.0;
 			}
     	else
     	{
@@ -375,6 +388,9 @@ void TIM3_IRQHandler(void)
 		switch (Mode) {
 			case 0:
 			{
+				//延时自动调整
+				PHASE[0]=
+
 				if((A_tick-B_tick)>3300)
 				{
 					PHASE_Order=0;
@@ -383,23 +399,24 @@ void TIM3_IRQHandler(void)
 				{
 					PHASE_Order=1;
 				}
-
-				COSNul+=0.01;
-				if(COSNul>=0.99)
+				if(COSNul<=0.90)
 				{
-					COSNul=1;
+					COSNul+=0.01;
+				}
+				else
+				{
 					Mode=1;
 				}
 				break;
 			}
 			case 1:
 			{
-    		DCpid_error = PW_VReal - DC_VReal;
+    		DCpid_error = PW_VReal*2.0 - DC_VReal;
     		PWM -= arm_pid_f32(&DCPID, DCpid_error);
-    		if(PWM>((TIM2->ARR-1)))
+    		if(PWM>((TIM2->ARR-1))*0.9)
     		{
-    			PWM=(TIM2->ARR-1);
-    			TIM2->CCR2 = (TIM2->ARR-1);
+    			PWM=(TIM2->ARR-1)*0.9;
+    			TIM2->CCR2 = (TIM2->ARR-1)*0.9;
     		}
     		else if(PWM<(TIM2->ARR-1)*0.1)
     		{
@@ -452,8 +469,8 @@ void TIM3_IRQHandler(void)
 			}
 			case 3:
 			{
-				PWM=0;
-				TIM2->CCR2 = 0;
+				//PWM=0;
+				//TIM2->CCR2 = 0;
 				COSNul=0.0;
 				if(PHASE_Order==0)
 				{
@@ -539,32 +556,32 @@ void EXTI15_10_IRQHandler(void)
 								case 1:
 								{
 									while(HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin)==0){}
-									PHASE[0]-=50;
-									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)(&(PHASE[0])),8, 100);
+									PHASE[0]-=500;
+									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE[0])),8, 1000);
 									//
 									goto END1;
 								}
 								case 2:
 								{
 									while(HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin)==0){}
-									PHASE[0]-=5;
-									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)(&(PHASE[0])),8, 100);
+									PHASE[0]-=50;
+									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE[0])),8, 1000);
 									//
 									goto END1;
 								}
 								case 3:
 								{
 									while(HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin)==0){}
-									PHASE[0]+=5;
-									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)(&(PHASE[0])),8, 100);
+									PHASE[0]+=50;
+									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE[0])),8, 1000);
 									//
 									goto END1;
 								}
 								case 4:
 								{
 									while(HAL_GPIO_ReadPin(ROW1_GPIO_Port, ROW1_Pin)==0){}
-									PHASE[0]+=50;
-									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_8BIT,(uint8_t*)(&(PHASE[0])),8, 100);
+									PHASE[0]+=500;
+									HAL_I2C_Mem_Write(&hi2c1, ADDR_AT24C02_Write, 0, I2C_MEMADD_SIZE_16BIT,(uint8_t*)(&(PHASE[0])),8, 1000);
 									//
 									goto END1;
 								}
@@ -613,44 +630,34 @@ void EXTI15_10_IRQHandler(void)
 								case 1:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
-									PWM=0;
-									TIM2->CCR2 = 0;
-								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW4_GPIO_Port, SW4_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW5_GPIO_Port, SW5_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW6_GPIO_Port, SW6_Pin, GPIO_PIN_RESET);
-								  Mode=3;
+									//PWM=0;
+									//TIM2->CCR2 = 0;
+								  HAL_GPIO_TogglePin(SW1_GPIO_Port, SW1_Pin);
+								  HAL_GPIO_TogglePin(SW2_GPIO_Port, SW2_Pin);
+								  HAL_GPIO_TogglePin(SW3_GPIO_Port, SW3_Pin);
+								  //Mode=3;
 									//
 									goto END2;
 								}
 								case 2:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
-									Mode=2;
-								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_RESET);
-								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_SET);
-								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_RESET);
+									//Mode=2;
+									HAL_GPIO_TogglePin(SW4_GPIO_Port, SW4_Pin);
+									HAL_GPIO_TogglePin(SW5_GPIO_Port, SW5_Pin);
+									HAL_GPIO_TogglePin(SW6_GPIO_Port, SW6_Pin);
 									//
 									goto END2;
 								}
 								case 3:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
-									Mode=2;
-								  HAL_GPIO_WritePin(SW1_GPIO_Port, SW1_Pin, GPIO_PIN_SET);
-								  HAL_GPIO_WritePin(SW2_GPIO_Port, SW2_Pin, GPIO_PIN_SET);
-								  HAL_GPIO_WritePin(SW3_GPIO_Port, SW3_Pin, GPIO_PIN_SET);
 									//
 									goto END2;
 								}
 								case 4:
 								{
 									while(HAL_GPIO_ReadPin(ROW2_GPIO_Port, ROW2_Pin)==0){}
-									HAL_GPIO_TogglePin(SW4_GPIO_Port, SW4_Pin);
-									HAL_GPIO_TogglePin(SW5_GPIO_Port, SW5_Pin);
-									HAL_GPIO_TogglePin(SW6_GPIO_Port, SW6_Pin);
 									//
 									goto END2;
 								}

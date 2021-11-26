@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ADCflag"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="ADCflag"/>
-			<item value="pwm"/>
-			<item value="PW_VReal"/>
+			<item value="Dither"/>
+			<item value="HAL_LTDC_EnableDither"/>
+			<item value="COSCom2_plus"/>
 			<item value="PHASE"/>
-			<item value="DC_VReal"/>
-			<item value="ADC3_Value_mem2"/>
-			<item value="Mode"/>
-			<item value="a"/>
-			<item value="END2"/>
-			<item value="ROW2"/>
-			<item value="END1"/>
-			<item value="A_tick"/>
-			<item value="DCPID"/>
-			<item value="    &#x09;&#x09;PWM += arm_pid_f32(&amp;DCPID, DCpid_error);"/>
-			<item value="PW_CReal_2"/>
+			<item value="PHASE[0]"/>
+			<item value="[0]"/>
+			<item value="pe"/>
+			<item value="re"/>
+			<item value="PWM"/>
+			<item value="COSCom"/>
+			<item value="trigon"/>
+			<item value="Trig_Ok"/>
+			<item value="COSNul"/>
+			<item value="ok"/>
+			<item value="ADflag"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ADflag"/>
 			<item value="END4"/>
 			<item value="ROW4"/>
 			<item value="END3"/>
@@ -44,6 +45,6 @@
 		<item key="DIALOG_Y_ORIGIN" value="161"/>
 		<item key="DIALOG_WIDTH" value="278"/>
 		<item key="DIALOG_HEIGHT" value="410"/>
-		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Microsoft YaHei UI"/>
 	</section>
 </section>

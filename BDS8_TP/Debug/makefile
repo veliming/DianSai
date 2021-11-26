@@ -9,7 +9,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Drivers/output/Scr/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Drivers/Obase/Scr/subdir.mk
 -include Drivers/LCD5110/Scr/subdir.mk

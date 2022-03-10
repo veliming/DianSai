@@ -18,3 +18,10 @@ C_DEPS += \
 Drivers/LCD5110/Scr/%.o: ../Drivers/LCD5110/Scr/%.c Drivers/LCD5110/Scr/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -I../Drivers/ADS8688/Inc -I../Drivers/LCDandTOUCH/Inc -I../Drivers/Obase/Inc -I../Drivers/LCD5110/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
+clean: clean-Drivers-2f-LCD5110-2f-Scr
+
+clean-Drivers-2f-LCD5110-2f-Scr:
+	-$(RM) ./Drivers/LCD5110/Scr/lcd5510.d ./Drivers/LCD5110/Scr/lcd5510.o
+
+.PHONY: clean-Drivers-2f-LCD5110-2f-Scr
+

@@ -44,8 +44,8 @@ typedef struct PID
   float ki;
   float kd;
   float ek;     //当前误差
-  float ek_1;   //上一次误�???
-  float ek_2;   //上上�???次误�???
+  float ek_1;   //上一次误�????
+  float ek_2;   //上上�????次误�????
   float limit;  //限幅
   float res;  //限幅
 }PID;
@@ -98,9 +98,9 @@ uint8_t var = 0;//循环变量
 
 uint8_t pressdown = 0;//长按监测
 
-uint16_t Pwm = 420;//pwm计数懂得�??
+uint16_t Pwm = 420;//pwm计数懂得�???
 
-uint8_t flag = 0;//s初次状�?�指�???
+uint8_t flag = 0;//s初次状�?�指�????
 
 //PID
 static PID pid;
@@ -302,7 +302,7 @@ int main(void)
 			  if(tp_dev.x[0]>225) Pwm=840;
 			  else if(tp_dev.x[0]<90) Pwm=0;
 			  else Pwm = 840.0*((tp_dev.x[0]-90.0)/135.0);
-			  TIM3->CCR1 = Pwm;//手动修改pwm占空�???
+			  TIM3->CCR1 = Pwm;//手动修改pwm占空�????
 
 		  }
 
@@ -337,7 +337,7 @@ int main(void)
 
 	  	  }
 
-	  //分模式控�???(PID)
+	  //分模式控�????(PID)
 	  if(MainMode==Manual&&SubMode==VoltageRegulation)
 	  {
 		  if(Current<(((ToC)/3.3)*4096))
@@ -388,7 +388,7 @@ int main(void)
 
 	  else if(MainMode==AutoCharge)
 	  {
-		  if(Current>340)//�?�?
+		  if(Current>340)//�??�??
 		  {
 
 			  if(Voltage_Behind<(((ToV1/4)/3.3)*4096))//横流
@@ -961,9 +961,9 @@ float PID_Increase(int Encoder,int Target)
 
 	float pwm = 0;
 	    pid.ek = Target - Encoder; // 计算当前误差
-	    pwm = pid.kp*(pid.ek - pid.ek_1) + pid.ki*pid.ek +pid.kd*(pid.ek - 2*pid.ek_1 + pid.ek_2);   //增量式PID控制�???
-	    pid.ek_2 = pid.ek_1; //保存上上�???次的偏差
-	    pid.ek_1 = pid.ek;   //保存上一次偏�???
+	    pwm = pid.kp*(pid.ek - pid.ek_1) + pid.ki*pid.ek +pid.kd*(pid.ek - 2*pid.ek_1 + pid.ek_2);   //增量式PID控制�????
+	    pid.ek_2 = pid.ek_1; //保存上上�????次的偏差
+	    pid.ek_1 = pid.ek;   //保存上一次偏�????
 
 	    if(pwm > pid.limit)
 	    {

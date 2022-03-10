@@ -26,5 +26,4 @@ Drivers/LCD5110/Scr \
 Drivers/LCDandTOUCH/Scr \
 Drivers/Obase/Scr \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Drivers/output/Scr \
 
